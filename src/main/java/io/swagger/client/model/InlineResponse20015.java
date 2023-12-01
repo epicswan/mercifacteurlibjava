@@ -35,7 +35,7 @@ public class InlineResponse20015 {
   private String error = null;
 
   @SerializedName("sav_id")
-  private Integer savId = null;
+  private Long savId = null;
 
   @SerializedName("sav_token")
   private String savToken = null;
@@ -76,7 +76,7 @@ public class InlineResponse20015 {
     this.error = error;
   }
 
-  public InlineResponse20015 savId(Integer savId) {
+  public InlineResponse20015 savId(Long savId) {
     this.savId = savId;
     return this;
   }
@@ -90,7 +90,7 @@ public class InlineResponse20015 {
     return savId;
   }
 
-  public void setSavId(Integer savId) {
+  public void setSavId(Long savId) {
     this.savId = savId;
   }
 
