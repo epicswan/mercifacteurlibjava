@@ -86,7 +86,7 @@ public class InlineResponse20015 {
    * @return savId
   **/
   @Schema(description = "L'id du ticket SAV")
-  public Integer getSavId() {
+  public Long getSavId() {
     return savId;
   }
 
