@@ -19,13 +19,14 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.InlineResponse20014TemplateValidation;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
  * InlineResponse20014
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class InlineResponse20014 {
   @SerializedName("success")
@@ -34,11 +35,8 @@ public class InlineResponse20014 {
   @SerializedName("error")
   private String error = null;
 
-  @SerializedName("idEnvoi")
-  private Integer idEnvoi = null;
-
-  @SerializedName("sourceValidation")
-  private Object sourceValidation = null;
+  @SerializedName("templateValidation")
+  private InlineResponse20014TemplateValidation templateValidation = null;
 
   public InlineResponse20014 success(Boolean success) {
     this.success = success;
@@ -76,40 +74,22 @@ public class InlineResponse20014 {
     this.error = error;
   }
 
-  public InlineResponse20014 idEnvoi(Integer idEnvoi) {
-    this.idEnvoi = idEnvoi;
+  public InlineResponse20014 templateValidation(InlineResponse20014TemplateValidation templateValidation) {
+    this.templateValidation = templateValidation;
     return this;
   }
 
    /**
-   * Identifiant de l&#x27;envoi pour procéder à sa validation
-   * @return idEnvoi
+   * Get templateValidation
+   * @return templateValidation
   **/
-  @Schema(description = "Identifiant de l'envoi pour procéder à sa validation")
-  public Integer getIdEnvoi() {
-    return idEnvoi;
+  @Schema(description = "")
+  public InlineResponse20014TemplateValidation getTemplateValidation() {
+    return templateValidation;
   }
 
-  public void setIdEnvoi(Integer idEnvoi) {
-    this.idEnvoi = idEnvoi;
-  }
-
-  public InlineResponse20014 sourceValidation(Object sourceValidation) {
-    this.sourceValidation = sourceValidation;
-    return this;
-  }
-
-   /**
-   * Les champs de fusion avec un éventuel retraitement, tels qu&#x27;ils seront utilisés lors de la fusion pour créer les lettres finales.
-   * @return sourceValidation
-  **/
-  @Schema(description = "Les champs de fusion avec un éventuel retraitement, tels qu'ils seront utilisés lors de la fusion pour créer les lettres finales.")
-  public Object getSourceValidation() {
-    return sourceValidation;
-  }
-
-  public void setSourceValidation(Object sourceValidation) {
-    this.sourceValidation = sourceValidation;
+  public void setTemplateValidation(InlineResponse20014TemplateValidation templateValidation) {
+    this.templateValidation = templateValidation;
   }
 
 
@@ -124,13 +104,12 @@ public class InlineResponse20014 {
     InlineResponse20014 inlineResponse20014 = (InlineResponse20014) o;
     return Objects.equals(this.success, inlineResponse20014.success) &&
         Objects.equals(this.error, inlineResponse20014.error) &&
-        Objects.equals(this.idEnvoi, inlineResponse20014.idEnvoi) &&
-        Objects.equals(this.sourceValidation, inlineResponse20014.sourceValidation);
+        Objects.equals(this.templateValidation, inlineResponse20014.templateValidation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(success, error, idEnvoi, sourceValidation);
+    return Objects.hash(success, error, templateValidation);
   }
 
 
@@ -141,8 +120,7 @@ public class InlineResponse20014 {
     
     sb.append("    success: ").append(toIndentedString(success)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    idEnvoi: ").append(toIndentedString(idEnvoi)).append("\n");
-    sb.append("    sourceValidation: ").append(toIndentedString(sourceValidation)).append("\n");
+    sb.append("    templateValidation: ").append(toIndentedString(templateValidation)).append("\n");
     sb.append("}");
     return sb.toString();
   }

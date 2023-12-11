@@ -12,9 +12,9 @@
 
 package io.swagger.client.api;
 
-import io.swagger.client.model.InlineResponse20018;
 import io.swagger.client.model.InlineResponse20019;
 import io.swagger.client.model.InlineResponse2002;
+import io.swagger.client.model.InlineResponse20020;
 import io.swagger.client.model.InlineResponse400;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -46,7 +46,7 @@ public class CompteApiTest {
     public void getQuotaCompteTest() throws Exception {
         String wwServiceId = null;
         String wwAccessToken = null;
-        InlineResponse20018 response = api.getQuotaCompte(wwServiceId, wwAccessToken);
+        InlineResponse20019 response = api.getQuotaCompte(wwServiceId, wwAccessToken);
 
         // TODO: test validations
     }
@@ -62,7 +62,7 @@ public class CompteApiTest {
     public void getWebhookEndpointTest() throws Exception {
         String wwServiceId = null;
         String wwAccessToken = null;
-        InlineResponse20019 response = api.getWebhookEndpoint(wwServiceId, wwAccessToken);
+        InlineResponse20020 response = api.getWebhookEndpoint(wwServiceId, wwAccessToken);
 
         // TODO: test validations
     }

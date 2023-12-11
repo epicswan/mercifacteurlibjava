@@ -19,79 +19,55 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.SendCourrierContentCard;
-import io.swagger.client.model.SendCourrierContentLetter;
-import io.swagger.client.model.SendCourrierContentPhoto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * Contenu du courrier à envoyer
+ * Infos sur les crédit restants
  */
-@Schema(description = "Contenu du courrier à envoyer")
+@Schema(description = "Infos sur les crédit restants")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
-public class SendCourrierContent {
-  @SerializedName("letter")
-  private SendCourrierContentLetter letter = null;
+public class InlineResponse20019QuotasCredit {
+  @SerializedName("amount")
+  private String amount = null;
 
-  @SerializedName("photo")
-  private SendCourrierContentPhoto photo = null;
+  @SerializedName("devise")
+  private String devise = null;
 
-  @SerializedName("card")
-  private SendCourrierContentCard card = null;
-
-  public SendCourrierContent letter(SendCourrierContentLetter letter) {
-    this.letter = letter;
+  public InlineResponse20019QuotasCredit amount(String amount) {
+    this.amount = amount;
     return this;
   }
 
    /**
-   * Get letter
-   * @return letter
+   * Montant restant sur le compte
+   * @return amount
   **/
-  @Schema(description = "")
-  public SendCourrierContentLetter getLetter() {
-    return letter;
+  @Schema(description = "Montant restant sur le compte")
+  public String getAmount() {
+    return amount;
   }
 
-  public void setLetter(SendCourrierContentLetter letter) {
-    this.letter = letter;
+  public void setAmount(String amount) {
+    this.amount = amount;
   }
 
-  public SendCourrierContent photo(SendCourrierContentPhoto photo) {
-    this.photo = photo;
+  public InlineResponse20019QuotasCredit devise(String devise) {
+    this.devise = devise;
     return this;
   }
 
    /**
-   * Get photo
-   * @return photo
+   * Devise du compte
+   * @return devise
   **/
-  @Schema(description = "")
-  public SendCourrierContentPhoto getPhoto() {
-    return photo;
+  @Schema(description = "Devise du compte")
+  public String getDevise() {
+    return devise;
   }
 
-  public void setPhoto(SendCourrierContentPhoto photo) {
-    this.photo = photo;
-  }
-
-  public SendCourrierContent card(SendCourrierContentCard card) {
-    this.card = card;
-    return this;
-  }
-
-   /**
-   * Get card
-   * @return card
-  **/
-  @Schema(description = "")
-  public SendCourrierContentCard getCard() {
-    return card;
-  }
-
-  public void setCard(SendCourrierContentCard card) {
-    this.card = card;
+  public void setDevise(String devise) {
+    this.devise = devise;
   }
 
 
@@ -103,26 +79,24 @@ public class SendCourrierContent {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SendCourrierContent sendCourrierContent = (SendCourrierContent) o;
-    return Objects.equals(this.letter, sendCourrierContent.letter) &&
-        Objects.equals(this.photo, sendCourrierContent.photo) &&
-        Objects.equals(this.card, sendCourrierContent.card);
+    InlineResponse20019QuotasCredit inlineResponse20019QuotasCredit = (InlineResponse20019QuotasCredit) o;
+    return Objects.equals(this.amount, inlineResponse20019QuotasCredit.amount) &&
+        Objects.equals(this.devise, inlineResponse20019QuotasCredit.devise);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(letter, photo, card);
+    return Objects.hash(amount, devise);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SendCourrierContent {\n");
+    sb.append("class InlineResponse20019QuotasCredit {\n");
     
-    sb.append("    letter: ").append(toIndentedString(letter)).append("\n");
-    sb.append("    photo: ").append(toIndentedString(photo)).append("\n");
-    sb.append("    card: ").append(toIndentedString(card)).append("\n");
+    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    sb.append("    devise: ").append(toIndentedString(devise)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -16,8 +16,9 @@ import io.swagger.client.model.AdressSendCourrier;
 import io.swagger.client.model.InlineResponse20010;
 import io.swagger.client.model.InlineResponse20011;
 import io.swagger.client.model.InlineResponse20012;
-import io.swagger.client.model.InlineResponse20016;
+import io.swagger.client.model.InlineResponse20013;
 import io.swagger.client.model.InlineResponse20017;
+import io.swagger.client.model.InlineResponse20018;
 import io.swagger.client.model.InlineResponse2002;
 import io.swagger.client.model.InlineResponse2008;
 import io.swagger.client.model.InlineResponse2009;
@@ -77,6 +78,24 @@ public class CourrierApiTest {
         // TODO: test validations
     }
     /**
+     * Lister les derniers évènements sur vos courriers
+     *
+     * Cette opération vous fourni l&#x27;historique des derniers évènements qui ont été executés en relation avec vos courriers. Si vous avez plus de 100 évènements sur la période, le résultat sera paginé.
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getLastEventsTest() throws Exception {
+        String wwServiceId = null;
+        String wwAccessToken = null;
+        Integer nbHeures = null;
+        Integer page = null;
+        InlineResponse20013 response = api.getLastEvents(wwServiceId, wwAccessToken, nbHeures, page);
+
+        // TODO: test validations
+    }
+    /**
      * Obtenir le montant d&#x27;un ou plusieurs courriers (non nécessaire à l&#x27;envoi)
      *
      * Vous permet d&#x27;avoir le montant de l&#x27;affranchissement et du contenu d&#x27;un courrier en fonction de son contenu, de son mode d&#x27;envoi et de sa destination. Vous n&#x27;avez pas besoin d&#x27;utiliser cette fonction pour envoyer un courrier, mais vous pouvez l&#x27;utiliser si vous avez besoin de cette information avant d&#x27;envoyer un courrier (par exemple pour des raisons de facturation). Le montant retourné est un montant HT. La partie \&quot;affranchissement\&quot; n&#x27;est pas soumise à la TVA.
@@ -115,7 +134,7 @@ public class CourrierApiTest {
         String wwAccessToken = null;
         String trackingNumber = null;
         String document = null;
-        InlineResponse20017 response = api.getProof(wwServiceId, wwAccessToken, trackingNumber, document);
+        InlineResponse20018 response = api.getProof(wwServiceId, wwAccessToken, trackingNumber, document);
 
         // TODO: test validations
     }
@@ -132,7 +151,7 @@ public class CourrierApiTest {
         String wwServiceId = null;
         String wwAccessToken = null;
         Integer idEnvoi = null;
-        InlineResponse20016 response = api.getSuiviEnvoi(wwServiceId, wwAccessToken, idEnvoi);
+        InlineResponse20017 response = api.getSuiviEnvoi(wwServiceId, wwAccessToken, idEnvoi);
 
         // TODO: test validations
     }

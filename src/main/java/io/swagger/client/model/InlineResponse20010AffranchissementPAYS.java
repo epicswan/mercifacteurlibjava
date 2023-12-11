@@ -25,7 +25,7 @@ import java.io.IOException;
  * Object contenant le montant d&#x27;affranchissement pour ce pays ainsi que la zone géographique.
  */
 @Schema(description = "Object contenant le montant d'affranchissement pour ce pays ainsi que la zone géographique.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class InlineResponse20010AffranchissementPAYS {
   @SerializedName("amount")

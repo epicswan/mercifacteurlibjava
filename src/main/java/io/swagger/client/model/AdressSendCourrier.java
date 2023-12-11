@@ -27,7 +27,7 @@ import java.util.List;
  * Les Id des adresses d&#x27;expéditeur et de destinataire (1 expéditeur, 1 ou plusieurs destinataires). OU directement les adresses dans un objet si vous ne souhaitez pas utiliser le carnet d&#x27;adresses (plus d&#x27;infos ici : https://github.com/MerciFacteur/Merci-facteur-API#format-des-adresses-lors-de-lenvoi-dun-courrier-).
  */
 @Schema(description = "Les Id des adresses d'expéditeur et de destinataire (1 expéditeur, 1 ou plusieurs destinataires). OU directement les adresses dans un objet si vous ne souhaitez pas utiliser le carnet d'adresses (plus d'infos ici : https://github.com/MerciFacteur/Merci-facteur-API#format-des-adresses-lors-de-lenvoi-dun-courrier-).")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class AdressSendCourrier {
   @SerializedName("exp")

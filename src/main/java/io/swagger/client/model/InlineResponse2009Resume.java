@@ -25,7 +25,7 @@ import java.io.IOException;
  * Résumé du contenu de l&#x27;envoi
  */
 @Schema(description = "Résumé du contenu de l'envoi")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class InlineResponse2009Resume {
   @SerializedName("nb_dest")

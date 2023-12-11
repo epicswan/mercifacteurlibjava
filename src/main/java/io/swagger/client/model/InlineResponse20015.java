@@ -25,7 +25,7 @@ import java.io.IOException;
  * InlineResponse20015
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class InlineResponse20015 {
   @SerializedName("success")
@@ -34,11 +34,11 @@ public class InlineResponse20015 {
   @SerializedName("error")
   private String error = null;
 
-  @SerializedName("sav_id")
-  private Long savId = null;
+  @SerializedName("idEnvoi")
+  private Integer idEnvoi = null;
 
-  @SerializedName("sav_token")
-  private String savToken = null;
+  @SerializedName("sourceValidation")
+  private Object sourceValidation = null;
 
   public InlineResponse20015 success(Boolean success) {
     this.success = success;
@@ -76,40 +76,40 @@ public class InlineResponse20015 {
     this.error = error;
   }
 
-  public InlineResponse20015 savId(Long savId) {
-    this.savId = savId;
+  public InlineResponse20015 idEnvoi(Integer idEnvoi) {
+    this.idEnvoi = idEnvoi;
     return this;
   }
 
    /**
-   * L&#x27;id du ticket SAV
-   * @return savId
+   * Identifiant de l&#x27;envoi pour procéder à sa validation
+   * @return idEnvoi
   **/
-  @Schema(description = "L'id du ticket SAV")
-  public Long getSavId() {
-    return savId;
+  @Schema(description = "Identifiant de l'envoi pour procéder à sa validation")
+  public Integer getIdEnvoi() {
+    return idEnvoi;
   }
 
-  public void setSavId(Long savId) {
-    this.savId = savId;
+  public void setIdEnvoi(Integer idEnvoi) {
+    this.idEnvoi = idEnvoi;
   }
 
-  public InlineResponse20015 savToken(String savToken) {
-    this.savToken = savToken;
+  public InlineResponse20015 sourceValidation(Object sourceValidation) {
+    this.sourceValidation = sourceValidation;
     return this;
   }
 
    /**
-   * Le token du ticket SAV
-   * @return savToken
+   * Les champs de fusion avec un éventuel retraitement, tels qu&#x27;ils seront utilisés lors de la fusion pour créer les lettres finales.
+   * @return sourceValidation
   **/
-  @Schema(description = "Le token du ticket SAV")
-  public String getSavToken() {
-    return savToken;
+  @Schema(description = "Les champs de fusion avec un éventuel retraitement, tels qu'ils seront utilisés lors de la fusion pour créer les lettres finales.")
+  public Object getSourceValidation() {
+    return sourceValidation;
   }
 
-  public void setSavToken(String savToken) {
-    this.savToken = savToken;
+  public void setSourceValidation(Object sourceValidation) {
+    this.sourceValidation = sourceValidation;
   }
 
 
@@ -124,13 +124,13 @@ public class InlineResponse20015 {
     InlineResponse20015 inlineResponse20015 = (InlineResponse20015) o;
     return Objects.equals(this.success, inlineResponse20015.success) &&
         Objects.equals(this.error, inlineResponse20015.error) &&
-        Objects.equals(this.savId, inlineResponse20015.savId) &&
-        Objects.equals(this.savToken, inlineResponse20015.savToken);
+        Objects.equals(this.idEnvoi, inlineResponse20015.idEnvoi) &&
+        Objects.equals(this.sourceValidation, inlineResponse20015.sourceValidation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(success, error, savId, savToken);
+    return Objects.hash(success, error, idEnvoi, sourceValidation);
   }
 
 
@@ -141,8 +141,8 @@ public class InlineResponse20015 {
     
     sb.append("    success: ").append(toIndentedString(success)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    savId: ").append(toIndentedString(savId)).append("\n");
-    sb.append("    savToken: ").append(toIndentedString(savToken)).append("\n");
+    sb.append("    idEnvoi: ").append(toIndentedString(idEnvoi)).append("\n");
+    sb.append("    sourceValidation: ").append(toIndentedString(sourceValidation)).append("\n");
     sb.append("}");
     return sb.toString();
   }

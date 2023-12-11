@@ -25,9 +25,9 @@ import java.io.IOException;
  * Objet contenant la correspondance entre chaque code d&#x27;erreur et sa signification.
  */
 @Schema(description = "Objet contenant la correspondance entre chaque code d'erreur et sa signification.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
-public class InlineResponse20020ListErrors {
+public class InlineResponse20021ListErrors {
   @SerializedName("ERROR_CODE_1")
   private String erRORCODE1 = null;
 
@@ -40,7 +40,7 @@ public class InlineResponse20020ListErrors {
   @SerializedName("ETC")
   private String ETC = null;
 
-  public InlineResponse20020ListErrors erRORCODE1(String erRORCODE1) {
+  public InlineResponse20021ListErrors erRORCODE1(String erRORCODE1) {
     this.erRORCODE1 = erRORCODE1;
     return this;
   }
@@ -58,7 +58,7 @@ public class InlineResponse20020ListErrors {
     this.erRORCODE1 = erRORCODE1;
   }
 
-  public InlineResponse20020ListErrors erRORCODE2(String erRORCODE2) {
+  public InlineResponse20021ListErrors erRORCODE2(String erRORCODE2) {
     this.erRORCODE2 = erRORCODE2;
     return this;
   }
@@ -76,7 +76,7 @@ public class InlineResponse20020ListErrors {
     this.erRORCODE2 = erRORCODE2;
   }
 
-  public InlineResponse20020ListErrors erRORCODE3(String erRORCODE3) {
+  public InlineResponse20021ListErrors erRORCODE3(String erRORCODE3) {
     this.erRORCODE3 = erRORCODE3;
     return this;
   }
@@ -94,7 +94,7 @@ public class InlineResponse20020ListErrors {
     this.erRORCODE3 = erRORCODE3;
   }
 
-  public InlineResponse20020ListErrors ETC(String ETC) {
+  public InlineResponse20021ListErrors ETC(String ETC) {
     this.ETC = ETC;
     return this;
   }
@@ -121,11 +121,11 @@ public class InlineResponse20020ListErrors {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse20020ListErrors inlineResponse20020ListErrors = (InlineResponse20020ListErrors) o;
-    return Objects.equals(this.erRORCODE1, inlineResponse20020ListErrors.erRORCODE1) &&
-        Objects.equals(this.erRORCODE2, inlineResponse20020ListErrors.erRORCODE2) &&
-        Objects.equals(this.erRORCODE3, inlineResponse20020ListErrors.erRORCODE3) &&
-        Objects.equals(this.ETC, inlineResponse20020ListErrors.ETC);
+    InlineResponse20021ListErrors inlineResponse20021ListErrors = (InlineResponse20021ListErrors) o;
+    return Objects.equals(this.erRORCODE1, inlineResponse20021ListErrors.erRORCODE1) &&
+        Objects.equals(this.erRORCODE2, inlineResponse20021ListErrors.erRORCODE2) &&
+        Objects.equals(this.erRORCODE3, inlineResponse20021ListErrors.erRORCODE3) &&
+        Objects.equals(this.ETC, inlineResponse20021ListErrors.ETC);
   }
 
   @Override
@@ -137,7 +137,7 @@ public class InlineResponse20020ListErrors {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse20020ListErrors {\n");
+    sb.append("class InlineResponse20021ListErrors {\n");
     
     sb.append("    erRORCODE1: ").append(toIndentedString(erRORCODE1)).append("\n");
     sb.append("    erRORCODE2: ").append(toIndentedString(erRORCODE2)).append("\n");

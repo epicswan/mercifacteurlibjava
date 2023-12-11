@@ -19,55 +19,77 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.InlineResponse20021ListErrors;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * Infos sur les crédit restants
+ * InlineResponse20021
  */
-@Schema(description = "Infos sur les crédit restants")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
 
-public class InlineResponse20018QuotasCredit {
-  @SerializedName("amount")
-  private String amount = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
-  @SerializedName("devise")
-  private String devise = null;
+public class InlineResponse20021 {
+  @SerializedName("success")
+  private Boolean success = null;
 
-  public InlineResponse20018QuotasCredit amount(String amount) {
-    this.amount = amount;
+  @SerializedName("error")
+  private String error = null;
+
+  @SerializedName("listErrors")
+  private InlineResponse20021ListErrors listErrors = null;
+
+  public InlineResponse20021 success(Boolean success) {
+    this.success = success;
     return this;
   }
 
    /**
-   * Montant restant sur le compte
-   * @return amount
+   * Get success
+   * @return success
   **/
-  @Schema(description = "Montant restant sur le compte")
-  public String getAmount() {
-    return amount;
+  @Schema(description = "")
+  public Boolean isSuccess() {
+    return success;
   }
 
-  public void setAmount(String amount) {
-    this.amount = amount;
+  public void setSuccess(Boolean success) {
+    this.success = success;
   }
 
-  public InlineResponse20018QuotasCredit devise(String devise) {
-    this.devise = devise;
+  public InlineResponse20021 error(String error) {
+    this.error = error;
     return this;
   }
 
    /**
-   * Devise du compte
-   * @return devise
+   * le code d&#x27;erreur en cas d&#x27;erreur
+   * @return error
   **/
-  @Schema(description = "Devise du compte")
-  public String getDevise() {
-    return devise;
+  @Schema(description = "le code d'erreur en cas d'erreur")
+  public String getError() {
+    return error;
   }
 
-  public void setDevise(String devise) {
-    this.devise = devise;
+  public void setError(String error) {
+    this.error = error;
+  }
+
+  public InlineResponse20021 listErrors(InlineResponse20021ListErrors listErrors) {
+    this.listErrors = listErrors;
+    return this;
+  }
+
+   /**
+   * Get listErrors
+   * @return listErrors
+  **/
+  @Schema(description = "")
+  public InlineResponse20021ListErrors getListErrors() {
+    return listErrors;
+  }
+
+  public void setListErrors(InlineResponse20021ListErrors listErrors) {
+    this.listErrors = listErrors;
   }
 
 
@@ -79,24 +101,26 @@ public class InlineResponse20018QuotasCredit {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse20018QuotasCredit inlineResponse20018QuotasCredit = (InlineResponse20018QuotasCredit) o;
-    return Objects.equals(this.amount, inlineResponse20018QuotasCredit.amount) &&
-        Objects.equals(this.devise, inlineResponse20018QuotasCredit.devise);
+    InlineResponse20021 inlineResponse20021 = (InlineResponse20021) o;
+    return Objects.equals(this.success, inlineResponse20021.success) &&
+        Objects.equals(this.error, inlineResponse20021.error) &&
+        Objects.equals(this.listErrors, inlineResponse20021.listErrors);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(amount, devise);
+    return Objects.hash(success, error, listErrors);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse20018QuotasCredit {\n");
+    sb.append("class InlineResponse20021 {\n");
     
-    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
-    sb.append("    devise: ").append(toIndentedString(devise)).append("\n");
+    sb.append("    success: ").append(toIndentedString(success)).append("\n");
+    sb.append("    error: ").append(toIndentedString(error)).append("\n");
+    sb.append("    listErrors: ").append(toIndentedString(listErrors)).append("\n");
     sb.append("}");
     return sb.toString();
   }

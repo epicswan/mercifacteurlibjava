@@ -19,14 +19,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.InlineResponse20020ListErrors;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
  * InlineResponse20020
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class InlineResponse20020 {
   @SerializedName("success")
@@ -35,8 +34,8 @@ public class InlineResponse20020 {
   @SerializedName("error")
   private String error = null;
 
-  @SerializedName("listErrors")
-  private InlineResponse20020ListErrors listErrors = null;
+  @SerializedName("url")
+  private String url = null;
 
   public InlineResponse20020 success(Boolean success) {
     this.success = success;
@@ -74,22 +73,22 @@ public class InlineResponse20020 {
     this.error = error;
   }
 
-  public InlineResponse20020 listErrors(InlineResponse20020ListErrors listErrors) {
-    this.listErrors = listErrors;
+  public InlineResponse20020 url(String url) {
+    this.url = url;
     return this;
   }
 
    /**
-   * Get listErrors
-   * @return listErrors
+   * URL du webhook paramétrée sur votre compte (vide si aucune URL définie).
+   * @return url
   **/
-  @Schema(description = "")
-  public InlineResponse20020ListErrors getListErrors() {
-    return listErrors;
+  @Schema(description = "URL du webhook paramétrée sur votre compte (vide si aucune URL définie).")
+  public String getUrl() {
+    return url;
   }
 
-  public void setListErrors(InlineResponse20020ListErrors listErrors) {
-    this.listErrors = listErrors;
+  public void setUrl(String url) {
+    this.url = url;
   }
 
 
@@ -104,12 +103,12 @@ public class InlineResponse20020 {
     InlineResponse20020 inlineResponse20020 = (InlineResponse20020) o;
     return Objects.equals(this.success, inlineResponse20020.success) &&
         Objects.equals(this.error, inlineResponse20020.error) &&
-        Objects.equals(this.listErrors, inlineResponse20020.listErrors);
+        Objects.equals(this.url, inlineResponse20020.url);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(success, error, listErrors);
+    return Objects.hash(success, error, url);
   }
 
 
@@ -120,7 +119,7 @@ public class InlineResponse20020 {
     
     sb.append("    success: ").append(toIndentedString(success)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    listErrors: ").append(toIndentedString(listErrors)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");
     return sb.toString();
   }

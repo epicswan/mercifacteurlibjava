@@ -26,7 +26,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.InlineResponse20015;
+import io.swagger.client.model.InlineResponse20016;
 import io.swagger.client.model.InlineResponse400;
 
 import java.lang.reflect.Type;
@@ -153,11 +153,11 @@ public class SavApi {
      * @param referenceCourrier  (optional)
      * @param sujet  (optional)
      * @param messageTexte  (optional)
-     * @return InlineResponse20015
+     * @return InlineResponse20016
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20015 openSavTicket(String wwServiceId, String wwAccessToken, String yourServiceName, String email, String referenceCourrier, String sujet, String messageTexte) throws ApiException {
-        ApiResponse<InlineResponse20015> resp = openSavTicketWithHttpInfo(wwServiceId, wwAccessToken, yourServiceName, email, referenceCourrier, sujet, messageTexte);
+    public InlineResponse20016 openSavTicket(String wwServiceId, String wwAccessToken, String yourServiceName, String email, String referenceCourrier, String sujet, String messageTexte) throws ApiException {
+        ApiResponse<InlineResponse20016> resp = openSavTicketWithHttpInfo(wwServiceId, wwAccessToken, yourServiceName, email, referenceCourrier, sujet, messageTexte);
         return resp.getData();
     }
 
@@ -171,12 +171,12 @@ public class SavApi {
      * @param referenceCourrier  (optional)
      * @param sujet  (optional)
      * @param messageTexte  (optional)
-     * @return ApiResponse&lt;InlineResponse20015&gt;
+     * @return ApiResponse&lt;InlineResponse20016&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20015> openSavTicketWithHttpInfo(String wwServiceId, String wwAccessToken, String yourServiceName, String email, String referenceCourrier, String sujet, String messageTexte) throws ApiException {
+    public ApiResponse<InlineResponse20016> openSavTicketWithHttpInfo(String wwServiceId, String wwAccessToken, String yourServiceName, String email, String referenceCourrier, String sujet, String messageTexte) throws ApiException {
         com.squareup.okhttp.Call call = openSavTicketValidateBeforeCall(wwServiceId, wwAccessToken, yourServiceName, email, referenceCourrier, sujet, messageTexte, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20015>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20016>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -194,7 +194,7 @@ public class SavApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call openSavTicketAsync(String wwServiceId, String wwAccessToken, String yourServiceName, String email, String referenceCourrier, String sujet, String messageTexte, final ApiCallback<InlineResponse20015> callback) throws ApiException {
+    public com.squareup.okhttp.Call openSavTicketAsync(String wwServiceId, String wwAccessToken, String yourServiceName, String email, String referenceCourrier, String sujet, String messageTexte, final ApiCallback<InlineResponse20016> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -216,7 +216,7 @@ public class SavApi {
         }
 
         com.squareup.okhttp.Call call = openSavTicketValidateBeforeCall(wwServiceId, wwAccessToken, yourServiceName, email, referenceCourrier, sujet, messageTexte, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20015>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20016>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

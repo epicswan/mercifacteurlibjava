@@ -19,13 +19,16 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.InlineResponse20017SuiviCourrier;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * InlineResponse20017
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class InlineResponse20017 {
   @SerializedName("success")
@@ -34,11 +37,11 @@ public class InlineResponse20017 {
   @SerializedName("error")
   private String error = null;
 
-  @SerializedName("format_return")
-  private String formatReturn = null;
+  @SerializedName("statutPrintEnvoi")
+  private String statutPrintEnvoi = null;
 
-  @SerializedName("document")
-  private String document = null;
+  @SerializedName("suiviCourrier")
+  private List<InlineResponse20017SuiviCourrier> suiviCourrier = null;
 
   public InlineResponse20017 success(Boolean success) {
     this.success = success;
@@ -76,40 +79,48 @@ public class InlineResponse20017 {
     this.error = error;
   }
 
-  public InlineResponse20017 formatReturn(String formatReturn) {
-    this.formatReturn = formatReturn;
+  public InlineResponse20017 statutPrintEnvoi(String statutPrintEnvoi) {
+    this.statutPrintEnvoi = statutPrintEnvoi;
     return this;
   }
 
    /**
-   * Le format du document (jpeg ou pdf).
-   * @return formatReturn
+   * Le statut de l&#x27;impression des courriers (exemples \&quot;Traitement en attente\&quot;,\&quot;Génération des courriers en cours\&quot;, \&quot;Préparation en cours\&quot;, \&quot;Impression en attente\&quot;, \&quot;Impression en cours\&quot;, \&quot;Impression terminée\&quot;)
+   * @return statutPrintEnvoi
   **/
-  @Schema(description = "Le format du document (jpeg ou pdf).")
-  public String getFormatReturn() {
-    return formatReturn;
+  @Schema(description = "Le statut de l'impression des courriers (exemples \"Traitement en attente\",\"Génération des courriers en cours\", \"Préparation en cours\", \"Impression en attente\", \"Impression en cours\", \"Impression terminée\")")
+  public String getStatutPrintEnvoi() {
+    return statutPrintEnvoi;
   }
 
-  public void setFormatReturn(String formatReturn) {
-    this.formatReturn = formatReturn;
+  public void setStatutPrintEnvoi(String statutPrintEnvoi) {
+    this.statutPrintEnvoi = statutPrintEnvoi;
   }
 
-  public InlineResponse20017 document(String document) {
-    this.document = document;
+  public InlineResponse20017 suiviCourrier(List<InlineResponse20017SuiviCourrier> suiviCourrier) {
+    this.suiviCourrier = suiviCourrier;
+    return this;
+  }
+
+  public InlineResponse20017 addSuiviCourrierItem(InlineResponse20017SuiviCourrier suiviCourrierItem) {
+    if (this.suiviCourrier == null) {
+      this.suiviCourrier = new ArrayList<InlineResponse20017SuiviCourrier>();
+    }
+    this.suiviCourrier.add(suiviCourrierItem);
     return this;
   }
 
    /**
-   * La base64 du document retourné. Pour créer le document en local ou l&#x27;afficher, associez-y la bonne entête en fonction du \&quot;format_return\&quot;.
-   * @return document
+   * Les infos de suivi de chaque courrier constituant cet envoi
+   * @return suiviCourrier
   **/
-  @Schema(description = "La base64 du document retourné. Pour créer le document en local ou l'afficher, associez-y la bonne entête en fonction du \"format_return\".")
-  public String getDocument() {
-    return document;
+  @Schema(description = "Les infos de suivi de chaque courrier constituant cet envoi")
+  public List<InlineResponse20017SuiviCourrier> getSuiviCourrier() {
+    return suiviCourrier;
   }
 
-  public void setDocument(String document) {
-    this.document = document;
+  public void setSuiviCourrier(List<InlineResponse20017SuiviCourrier> suiviCourrier) {
+    this.suiviCourrier = suiviCourrier;
   }
 
 
@@ -124,13 +135,13 @@ public class InlineResponse20017 {
     InlineResponse20017 inlineResponse20017 = (InlineResponse20017) o;
     return Objects.equals(this.success, inlineResponse20017.success) &&
         Objects.equals(this.error, inlineResponse20017.error) &&
-        Objects.equals(this.formatReturn, inlineResponse20017.formatReturn) &&
-        Objects.equals(this.document, inlineResponse20017.document);
+        Objects.equals(this.statutPrintEnvoi, inlineResponse20017.statutPrintEnvoi) &&
+        Objects.equals(this.suiviCourrier, inlineResponse20017.suiviCourrier);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(success, error, formatReturn, document);
+    return Objects.hash(success, error, statutPrintEnvoi, suiviCourrier);
   }
 
 
@@ -141,8 +152,8 @@ public class InlineResponse20017 {
     
     sb.append("    success: ").append(toIndentedString(success)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    formatReturn: ").append(toIndentedString(formatReturn)).append("\n");
-    sb.append("    document: ").append(toIndentedString(document)).append("\n");
+    sb.append("    statutPrintEnvoi: ").append(toIndentedString(statutPrintEnvoi)).append("\n");
+    sb.append("    suiviCourrier: ").append(toIndentedString(suiviCourrier)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -22,12 +22,12 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * InlineResponse20016SuiviCourrier
+ * InlineResponse20017SuiviCourrier
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
-public class InlineResponse20016SuiviCourrier {
+public class InlineResponse20017SuiviCourrier {
   @SerializedName("dest")
   private String dest = null;
 
@@ -52,7 +52,7 @@ public class InlineResponse20016SuiviCourrier {
   @SerializedName("are_base64_jpeg")
   private String areBase64Jpeg = null;
 
-  public InlineResponse20016SuiviCourrier dest(String dest) {
+  public InlineResponse20017SuiviCourrier dest(String dest) {
     this.dest = dest;
     return this;
   }
@@ -70,7 +70,7 @@ public class InlineResponse20016SuiviCourrier {
     this.dest = dest;
   }
 
-  public InlineResponse20016SuiviCourrier refCourrier(String refCourrier) {
+  public InlineResponse20017SuiviCourrier refCourrier(String refCourrier) {
     this.refCourrier = refCourrier;
     return this;
   }
@@ -88,7 +88,7 @@ public class InlineResponse20016SuiviCourrier {
     this.refCourrier = refCourrier;
   }
 
-  public InlineResponse20016SuiviCourrier refTracking(String refTracking) {
+  public InlineResponse20017SuiviCourrier refTracking(String refTracking) {
     this.refTracking = refTracking;
     return this;
   }
@@ -106,7 +106,7 @@ public class InlineResponse20016SuiviCourrier {
     this.refTracking = refTracking;
   }
 
-  public InlineResponse20016SuiviCourrier modeEnvoi(String modeEnvoi) {
+  public InlineResponse20017SuiviCourrier modeEnvoi(String modeEnvoi) {
     this.modeEnvoi = modeEnvoi;
     return this;
   }
@@ -124,7 +124,7 @@ public class InlineResponse20016SuiviCourrier {
     this.modeEnvoi = modeEnvoi;
   }
 
-  public InlineResponse20016SuiviCourrier lastState(String lastState) {
+  public InlineResponse20017SuiviCourrier lastState(String lastState) {
     this.lastState = lastState;
     return this;
   }
@@ -142,7 +142,7 @@ public class InlineResponse20016SuiviCourrier {
     this.lastState = lastState;
   }
 
-  public InlineResponse20016SuiviCourrier historique(String historique) {
+  public InlineResponse20017SuiviCourrier historique(String historique) {
     this.historique = historique;
     return this;
   }
@@ -160,7 +160,7 @@ public class InlineResponse20016SuiviCourrier {
     this.historique = historique;
   }
 
-  public InlineResponse20016SuiviCourrier pnd(String pnd) {
+  public InlineResponse20017SuiviCourrier pnd(String pnd) {
     this.pnd = pnd;
     return this;
   }
@@ -178,7 +178,7 @@ public class InlineResponse20016SuiviCourrier {
     this.pnd = pnd;
   }
 
-  public InlineResponse20016SuiviCourrier areBase64Jpeg(String areBase64Jpeg) {
+  public InlineResponse20017SuiviCourrier areBase64Jpeg(String areBase64Jpeg) {
     this.areBase64Jpeg = areBase64Jpeg;
     return this;
   }
@@ -205,15 +205,15 @@ public class InlineResponse20016SuiviCourrier {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse20016SuiviCourrier inlineResponse20016SuiviCourrier = (InlineResponse20016SuiviCourrier) o;
-    return Objects.equals(this.dest, inlineResponse20016SuiviCourrier.dest) &&
-        Objects.equals(this.refCourrier, inlineResponse20016SuiviCourrier.refCourrier) &&
-        Objects.equals(this.refTracking, inlineResponse20016SuiviCourrier.refTracking) &&
-        Objects.equals(this.modeEnvoi, inlineResponse20016SuiviCourrier.modeEnvoi) &&
-        Objects.equals(this.lastState, inlineResponse20016SuiviCourrier.lastState) &&
-        Objects.equals(this.historique, inlineResponse20016SuiviCourrier.historique) &&
-        Objects.equals(this.pnd, inlineResponse20016SuiviCourrier.pnd) &&
-        Objects.equals(this.areBase64Jpeg, inlineResponse20016SuiviCourrier.areBase64Jpeg);
+    InlineResponse20017SuiviCourrier inlineResponse20017SuiviCourrier = (InlineResponse20017SuiviCourrier) o;
+    return Objects.equals(this.dest, inlineResponse20017SuiviCourrier.dest) &&
+        Objects.equals(this.refCourrier, inlineResponse20017SuiviCourrier.refCourrier) &&
+        Objects.equals(this.refTracking, inlineResponse20017SuiviCourrier.refTracking) &&
+        Objects.equals(this.modeEnvoi, inlineResponse20017SuiviCourrier.modeEnvoi) &&
+        Objects.equals(this.lastState, inlineResponse20017SuiviCourrier.lastState) &&
+        Objects.equals(this.historique, inlineResponse20017SuiviCourrier.historique) &&
+        Objects.equals(this.pnd, inlineResponse20017SuiviCourrier.pnd) &&
+        Objects.equals(this.areBase64Jpeg, inlineResponse20017SuiviCourrier.areBase64Jpeg);
   }
 
   @Override
@@ -225,7 +225,7 @@ public class InlineResponse20016SuiviCourrier {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse20016SuiviCourrier {\n");
+    sb.append("class InlineResponse20017SuiviCourrier {\n");
     
     sb.append("    dest: ").append(toIndentedString(dest)).append("\n");
     sb.append("    refCourrier: ").append(toIndentedString(refCourrier)).append("\n");

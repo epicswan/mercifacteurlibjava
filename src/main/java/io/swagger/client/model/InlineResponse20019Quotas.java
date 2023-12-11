@@ -19,55 +19,79 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.InlineResponse20019QuotasCredit;
+import io.swagger.client.model.InlineResponse20019QuotasPages;
+import io.swagger.client.model.InlineResponse20019QuotasPlan;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * Infos sur le plan souscrit
+ * Objet contenant les infos des quotas du compte.
  */
-@Schema(description = "Infos sur le plan souscrit")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@Schema(description = "Objet contenant les infos des quotas du compte.")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
-public class InlineResponse20018QuotasPlan {
-  @SerializedName("name")
-  private String name = null;
+public class InlineResponse20019Quotas {
+  @SerializedName("plan")
+  private InlineResponse20019QuotasPlan plan = null;
 
-  @SerializedName("expire")
-  private String expire = null;
+  @SerializedName("credit")
+  private InlineResponse20019QuotasCredit credit = null;
 
-  public InlineResponse20018QuotasPlan name(String name) {
-    this.name = name;
+  @SerializedName("pages")
+  private InlineResponse20019QuotasPages pages = null;
+
+  public InlineResponse20019Quotas plan(InlineResponse20019QuotasPlan plan) {
+    this.plan = plan;
     return this;
   }
 
    /**
-   * Nom du plan actuellement souscrit
-   * @return name
+   * Get plan
+   * @return plan
   **/
-  @Schema(description = "Nom du plan actuellement souscrit")
-  public String getName() {
-    return name;
+  @Schema(description = "")
+  public InlineResponse20019QuotasPlan getPlan() {
+    return plan;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setPlan(InlineResponse20019QuotasPlan plan) {
+    this.plan = plan;
   }
 
-  public InlineResponse20018QuotasPlan expire(String expire) {
-    this.expire = expire;
+  public InlineResponse20019Quotas credit(InlineResponse20019QuotasCredit credit) {
+    this.credit = credit;
     return this;
   }
 
    /**
-   * date d&#x27;expiration au format Y-m-d H:i:s
-   * @return expire
+   * Get credit
+   * @return credit
   **/
-  @Schema(description = "date d'expiration au format Y-m-d H:i:s")
-  public String getExpire() {
-    return expire;
+  @Schema(description = "")
+  public InlineResponse20019QuotasCredit getCredit() {
+    return credit;
   }
 
-  public void setExpire(String expire) {
-    this.expire = expire;
+  public void setCredit(InlineResponse20019QuotasCredit credit) {
+    this.credit = credit;
+  }
+
+  public InlineResponse20019Quotas pages(InlineResponse20019QuotasPages pages) {
+    this.pages = pages;
+    return this;
+  }
+
+   /**
+   * Get pages
+   * @return pages
+  **/
+  @Schema(description = "")
+  public InlineResponse20019QuotasPages getPages() {
+    return pages;
+  }
+
+  public void setPages(InlineResponse20019QuotasPages pages) {
+    this.pages = pages;
   }
 
 
@@ -79,24 +103,26 @@ public class InlineResponse20018QuotasPlan {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse20018QuotasPlan inlineResponse20018QuotasPlan = (InlineResponse20018QuotasPlan) o;
-    return Objects.equals(this.name, inlineResponse20018QuotasPlan.name) &&
-        Objects.equals(this.expire, inlineResponse20018QuotasPlan.expire);
+    InlineResponse20019Quotas inlineResponse20019Quotas = (InlineResponse20019Quotas) o;
+    return Objects.equals(this.plan, inlineResponse20019Quotas.plan) &&
+        Objects.equals(this.credit, inlineResponse20019Quotas.credit) &&
+        Objects.equals(this.pages, inlineResponse20019Quotas.pages);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, expire);
+    return Objects.hash(plan, credit, pages);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse20018QuotasPlan {\n");
+    sb.append("class InlineResponse20019Quotas {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    expire: ").append(toIndentedString(expire)).append("\n");
+    sb.append("    plan: ").append(toIndentedString(plan)).append("\n");
+    sb.append("    credit: ").append(toIndentedString(credit)).append("\n");
+    sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
     sb.append("}");
     return sb.toString();
   }

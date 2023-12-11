@@ -19,13 +19,14 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.InlineResponse20019Quotas;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
  * InlineResponse20019
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class InlineResponse20019 {
   @SerializedName("success")
@@ -34,8 +35,8 @@ public class InlineResponse20019 {
   @SerializedName("error")
   private String error = null;
 
-  @SerializedName("url")
-  private String url = null;
+  @SerializedName("quotas")
+  private InlineResponse20019Quotas quotas = null;
 
   public InlineResponse20019 success(Boolean success) {
     this.success = success;
@@ -73,22 +74,22 @@ public class InlineResponse20019 {
     this.error = error;
   }
 
-  public InlineResponse20019 url(String url) {
-    this.url = url;
+  public InlineResponse20019 quotas(InlineResponse20019Quotas quotas) {
+    this.quotas = quotas;
     return this;
   }
 
    /**
-   * URL du webhook paramétrée sur votre compte (vide si aucune URL définie).
-   * @return url
+   * Get quotas
+   * @return quotas
   **/
-  @Schema(description = "URL du webhook paramétrée sur votre compte (vide si aucune URL définie).")
-  public String getUrl() {
-    return url;
+  @Schema(description = "")
+  public InlineResponse20019Quotas getQuotas() {
+    return quotas;
   }
 
-  public void setUrl(String url) {
-    this.url = url;
+  public void setQuotas(InlineResponse20019Quotas quotas) {
+    this.quotas = quotas;
   }
 
 
@@ -103,12 +104,12 @@ public class InlineResponse20019 {
     InlineResponse20019 inlineResponse20019 = (InlineResponse20019) o;
     return Objects.equals(this.success, inlineResponse20019.success) &&
         Objects.equals(this.error, inlineResponse20019.error) &&
-        Objects.equals(this.url, inlineResponse20019.url);
+        Objects.equals(this.quotas, inlineResponse20019.quotas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(success, error, url);
+    return Objects.hash(success, error, quotas);
   }
 
 
@@ -119,7 +120,7 @@ public class InlineResponse20019 {
     
     sb.append("    success: ").append(toIndentedString(success)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    quotas: ").append(toIndentedString(quotas)).append("\n");
     sb.append("}");
     return sb.toString();
   }

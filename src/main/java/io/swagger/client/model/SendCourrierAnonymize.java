@@ -27,7 +27,7 @@ import java.util.List;
  * Facultatif, permet de demander la suppression d\\&#x27;éléments du courrier un certain délai (en nombre de jours) après l\\&#x27;impression du courrier. A utiliser si vous ne souhaitez pas que les données des courriers soient conservées sur les serveurs de Merci Facteur. Exemple de valeur : {\&quot;delay\&quot;:15,\&quot;target\&quot;:[\&quot;content\&quot;,\&quot;exp\&quot;,\&quot;dest\&quot;]} (plus d\\&#x27;infos ici : https://github.com/MerciFacteur/Merci-facteur-API/#anonymisation)
  */
 @Schema(description = "Facultatif, permet de demander la suppression d\\'éléments du courrier un certain délai (en nombre de jours) après l\\'impression du courrier. A utiliser si vous ne souhaitez pas que les données des courriers soient conservées sur les serveurs de Merci Facteur. Exemple de valeur : {\"delay\":15,\"target\":[\"content\",\"exp\",\"dest\"]} (plus d\\'infos ici : https://github.com/MerciFacteur/Merci-facteur-API/#anonymisation)")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class SendCourrierAnonymize {
   @SerializedName("delay")

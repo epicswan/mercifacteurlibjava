@@ -26,9 +26,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.InlineResponse20018;
 import io.swagger.client.model.InlineResponse20019;
 import io.swagger.client.model.InlineResponse2002;
+import io.swagger.client.model.InlineResponse20020;
 import io.swagger.client.model.InlineResponse400;
 
 import java.lang.reflect.Type;
@@ -135,11 +135,11 @@ public class CompteApi {
      * Obtenir le montant restant sur le compte, la date d&#x27;expiration du plan, ainsi que le nombre de pages envoyées dans le mois.
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
-     * @return InlineResponse20018
+     * @return InlineResponse20019
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20018 getQuotaCompte(String wwServiceId, String wwAccessToken) throws ApiException {
-        ApiResponse<InlineResponse20018> resp = getQuotaCompteWithHttpInfo(wwServiceId, wwAccessToken);
+    public InlineResponse20019 getQuotaCompte(String wwServiceId, String wwAccessToken) throws ApiException {
+        ApiResponse<InlineResponse20019> resp = getQuotaCompteWithHttpInfo(wwServiceId, wwAccessToken);
         return resp.getData();
     }
 
@@ -148,12 +148,12 @@ public class CompteApi {
      * Obtenir le montant restant sur le compte, la date d&#x27;expiration du plan, ainsi que le nombre de pages envoyées dans le mois.
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
-     * @return ApiResponse&lt;InlineResponse20018&gt;
+     * @return ApiResponse&lt;InlineResponse20019&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20018> getQuotaCompteWithHttpInfo(String wwServiceId, String wwAccessToken) throws ApiException {
+    public ApiResponse<InlineResponse20019> getQuotaCompteWithHttpInfo(String wwServiceId, String wwAccessToken) throws ApiException {
         com.squareup.okhttp.Call call = getQuotaCompteValidateBeforeCall(wwServiceId, wwAccessToken, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20018>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20019>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -166,7 +166,7 @@ public class CompteApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getQuotaCompteAsync(String wwServiceId, String wwAccessToken, final ApiCallback<InlineResponse20018> callback) throws ApiException {
+    public com.squareup.okhttp.Call getQuotaCompteAsync(String wwServiceId, String wwAccessToken, final ApiCallback<InlineResponse20019> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -188,7 +188,7 @@ public class CompteApi {
         }
 
         com.squareup.okhttp.Call call = getQuotaCompteValidateBeforeCall(wwServiceId, wwAccessToken, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20018>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20019>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -271,11 +271,11 @@ public class CompteApi {
      * Obtenir l&#x27;URL de webhook parametrée sur le compte (URL sur laquelle seront envoyé les évènements liés à vos courriers). Si aucune URL webhook n&#x27;est renseigné, vous recevrez une chaine de caractères vide. 
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
-     * @return InlineResponse20019
+     * @return InlineResponse20020
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20019 getWebhookEndpoint(String wwServiceId, String wwAccessToken) throws ApiException {
-        ApiResponse<InlineResponse20019> resp = getWebhookEndpointWithHttpInfo(wwServiceId, wwAccessToken);
+    public InlineResponse20020 getWebhookEndpoint(String wwServiceId, String wwAccessToken) throws ApiException {
+        ApiResponse<InlineResponse20020> resp = getWebhookEndpointWithHttpInfo(wwServiceId, wwAccessToken);
         return resp.getData();
     }
 
@@ -284,12 +284,12 @@ public class CompteApi {
      * Obtenir l&#x27;URL de webhook parametrée sur le compte (URL sur laquelle seront envoyé les évènements liés à vos courriers). Si aucune URL webhook n&#x27;est renseigné, vous recevrez une chaine de caractères vide. 
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
-     * @return ApiResponse&lt;InlineResponse20019&gt;
+     * @return ApiResponse&lt;InlineResponse20020&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20019> getWebhookEndpointWithHttpInfo(String wwServiceId, String wwAccessToken) throws ApiException {
+    public ApiResponse<InlineResponse20020> getWebhookEndpointWithHttpInfo(String wwServiceId, String wwAccessToken) throws ApiException {
         com.squareup.okhttp.Call call = getWebhookEndpointValidateBeforeCall(wwServiceId, wwAccessToken, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20019>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20020>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -302,7 +302,7 @@ public class CompteApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getWebhookEndpointAsync(String wwServiceId, String wwAccessToken, final ApiCallback<InlineResponse20019> callback) throws ApiException {
+    public com.squareup.okhttp.Call getWebhookEndpointAsync(String wwServiceId, String wwAccessToken, final ApiCallback<InlineResponse20020> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -324,7 +324,7 @@ public class CompteApi {
         }
 
         com.squareup.okhttp.Call call = getWebhookEndpointValidateBeforeCall(wwServiceId, wwAccessToken, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20019>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20020>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

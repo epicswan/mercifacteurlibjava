@@ -12,8 +12,8 @@
 
 package io.swagger.client.api;
 
-import io.swagger.client.model.InlineResponse20013;
 import io.swagger.client.model.InlineResponse20014;
+import io.swagger.client.model.InlineResponse20015;
 import io.swagger.client.model.InlineResponse2009;
 import io.swagger.client.model.InlineResponse400;
 import io.swagger.client.model.SendCourrierAnonymize;
@@ -72,7 +72,7 @@ public class PublipostageApiTest {
         SourcePublipostageSource source = null;
         String wwServiceId = null;
         String wwAccessToken = null;
-        InlineResponse20014 response = api.sourcePublipostage(idUser, templateValidation, source, wwServiceId, wwAccessToken);
+        InlineResponse20015 response = api.sourcePublipostage(idUser, templateValidation, source, wwServiceId, wwAccessToken);
 
         // TODO: test validations
     }
@@ -90,7 +90,7 @@ public class PublipostageApiTest {
         String template = null;
         String wwServiceId = null;
         String wwAccessToken = null;
-        InlineResponse20013 response = api.templatePublipostage(typeTemplate, template, wwServiceId, wwAccessToken);
+        InlineResponse20014 response = api.templatePublipostage(typeTemplate, template, wwServiceId, wwAccessToken);
 
         // TODO: test validations
     }

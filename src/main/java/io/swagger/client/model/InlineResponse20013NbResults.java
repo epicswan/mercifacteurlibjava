@@ -19,79 +19,55 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.SendCourrierContentCard;
-import io.swagger.client.model.SendCourrierContentLetter;
-import io.swagger.client.model.SendCourrierContentPhoto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * Contenu du courrier à envoyer
+ * InlineResponse20013NbResults
  */
-@Schema(description = "Contenu du courrier à envoyer")
+
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
-public class SendCourrierContent {
-  @SerializedName("letter")
-  private SendCourrierContentLetter letter = null;
+public class InlineResponse20013NbResults {
+  @SerializedName("current")
+  private Integer current = null;
 
-  @SerializedName("photo")
-  private SendCourrierContentPhoto photo = null;
+  @SerializedName("total")
+  private Integer total = null;
 
-  @SerializedName("card")
-  private SendCourrierContentCard card = null;
-
-  public SendCourrierContent letter(SendCourrierContentLetter letter) {
-    this.letter = letter;
+  public InlineResponse20013NbResults current(Integer current) {
+    this.current = current;
     return this;
   }
 
    /**
-   * Get letter
-   * @return letter
+   * Nombre d&#x27;évènements dans la page actuelle
+   * @return current
   **/
-  @Schema(description = "")
-  public SendCourrierContentLetter getLetter() {
-    return letter;
+  @Schema(description = "Nombre d'évènements dans la page actuelle")
+  public Integer getCurrent() {
+    return current;
   }
 
-  public void setLetter(SendCourrierContentLetter letter) {
-    this.letter = letter;
+  public void setCurrent(Integer current) {
+    this.current = current;
   }
 
-  public SendCourrierContent photo(SendCourrierContentPhoto photo) {
-    this.photo = photo;
+  public InlineResponse20013NbResults total(Integer total) {
+    this.total = total;
     return this;
   }
 
    /**
-   * Get photo
-   * @return photo
+   * Nombre total d&#x27;évènements
+   * @return total
   **/
-  @Schema(description = "")
-  public SendCourrierContentPhoto getPhoto() {
-    return photo;
+  @Schema(description = "Nombre total d'évènements")
+  public Integer getTotal() {
+    return total;
   }
 
-  public void setPhoto(SendCourrierContentPhoto photo) {
-    this.photo = photo;
-  }
-
-  public SendCourrierContent card(SendCourrierContentCard card) {
-    this.card = card;
-    return this;
-  }
-
-   /**
-   * Get card
-   * @return card
-  **/
-  @Schema(description = "")
-  public SendCourrierContentCard getCard() {
-    return card;
-  }
-
-  public void setCard(SendCourrierContentCard card) {
-    this.card = card;
+  public void setTotal(Integer total) {
+    this.total = total;
   }
 
 
@@ -103,26 +79,24 @@ public class SendCourrierContent {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SendCourrierContent sendCourrierContent = (SendCourrierContent) o;
-    return Objects.equals(this.letter, sendCourrierContent.letter) &&
-        Objects.equals(this.photo, sendCourrierContent.photo) &&
-        Objects.equals(this.card, sendCourrierContent.card);
+    InlineResponse20013NbResults inlineResponse20013NbResults = (InlineResponse20013NbResults) o;
+    return Objects.equals(this.current, inlineResponse20013NbResults.current) &&
+        Objects.equals(this.total, inlineResponse20013NbResults.total);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(letter, photo, card);
+    return Objects.hash(current, total);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SendCourrierContent {\n");
+    sb.append("class InlineResponse20013NbResults {\n");
     
-    sb.append("    letter: ").append(toIndentedString(letter)).append("\n");
-    sb.append("    photo: ").append(toIndentedString(photo)).append("\n");
-    sb.append("    card: ").append(toIndentedString(card)).append("\n");
+    sb.append("    current: ").append(toIndentedString(current)).append("\n");
+    sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");
     return sb.toString();
   }

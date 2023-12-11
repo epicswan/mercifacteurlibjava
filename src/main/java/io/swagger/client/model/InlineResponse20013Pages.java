@@ -22,67 +22,46 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * Infos sur les pages envoyées
+ * InlineResponse20013Pages
  */
-@Schema(description = "Infos sur les pages envoyées")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
 
-public class InlineResponse20018QuotasPages {
-  @SerializedName("thisMounth")
-  private Integer thisMounth = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
-  @SerializedName("maxMounth")
-  private Integer maxMounth = null;
+public class InlineResponse20013Pages {
+  @SerializedName("current")
+  private Integer current = null;
 
   @SerializedName("total")
   private Integer total = null;
 
-  public InlineResponse20018QuotasPages thisMounth(Integer thisMounth) {
-    this.thisMounth = thisMounth;
+  public InlineResponse20013Pages current(Integer current) {
+    this.current = current;
     return this;
   }
 
    /**
-   * Nombre de pages envoyées dans le mois courant
-   * @return thisMounth
+   * Page actuelle
+   * @return current
   **/
-  @Schema(description = "Nombre de pages envoyées dans le mois courant")
-  public Integer getThisMounth() {
-    return thisMounth;
+  @Schema(description = "Page actuelle")
+  public Integer getCurrent() {
+    return current;
   }
 
-  public void setThisMounth(Integer thisMounth) {
-    this.thisMounth = thisMounth;
+  public void setCurrent(Integer current) {
+    this.current = current;
   }
 
-  public InlineResponse20018QuotasPages maxMounth(Integer maxMounth) {
-    this.maxMounth = maxMounth;
-    return this;
-  }
-
-   /**
-   * Nombre maximum de pages par mois
-   * @return maxMounth
-  **/
-  @Schema(description = "Nombre maximum de pages par mois")
-  public Integer getMaxMounth() {
-    return maxMounth;
-  }
-
-  public void setMaxMounth(Integer maxMounth) {
-    this.maxMounth = maxMounth;
-  }
-
-  public InlineResponse20018QuotasPages total(Integer total) {
+  public InlineResponse20013Pages total(Integer total) {
     this.total = total;
     return this;
   }
 
    /**
-   * Nombre total de pages envoyées depuis la création du compte
+   * Nombre total de pages
    * @return total
   **/
-  @Schema(description = "Nombre total de pages envoyées depuis la création du compte")
+  @Schema(description = "Nombre total de pages")
   public Integer getTotal() {
     return total;
   }
@@ -100,25 +79,23 @@ public class InlineResponse20018QuotasPages {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse20018QuotasPages inlineResponse20018QuotasPages = (InlineResponse20018QuotasPages) o;
-    return Objects.equals(this.thisMounth, inlineResponse20018QuotasPages.thisMounth) &&
-        Objects.equals(this.maxMounth, inlineResponse20018QuotasPages.maxMounth) &&
-        Objects.equals(this.total, inlineResponse20018QuotasPages.total);
+    InlineResponse20013Pages inlineResponse20013Pages = (InlineResponse20013Pages) o;
+    return Objects.equals(this.current, inlineResponse20013Pages.current) &&
+        Objects.equals(this.total, inlineResponse20013Pages.total);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(thisMounth, maxMounth, total);
+    return Objects.hash(current, total);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse20018QuotasPages {\n");
+    sb.append("class InlineResponse20013Pages {\n");
     
-    sb.append("    thisMounth: ").append(toIndentedString(thisMounth)).append("\n");
-    sb.append("    maxMounth: ").append(toIndentedString(maxMounth)).append("\n");
+    sb.append("    current: ").append(toIndentedString(current)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");
     return sb.toString();

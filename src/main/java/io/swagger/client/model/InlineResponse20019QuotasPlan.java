@@ -19,79 +19,55 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.SendCourrierContentCard;
-import io.swagger.client.model.SendCourrierContentLetter;
-import io.swagger.client.model.SendCourrierContentPhoto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * Contenu du courrier à envoyer
+ * Infos sur le plan souscrit
  */
-@Schema(description = "Contenu du courrier à envoyer")
+@Schema(description = "Infos sur le plan souscrit")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
-public class SendCourrierContent {
-  @SerializedName("letter")
-  private SendCourrierContentLetter letter = null;
+public class InlineResponse20019QuotasPlan {
+  @SerializedName("name")
+  private String name = null;
 
-  @SerializedName("photo")
-  private SendCourrierContentPhoto photo = null;
+  @SerializedName("expire")
+  private String expire = null;
 
-  @SerializedName("card")
-  private SendCourrierContentCard card = null;
-
-  public SendCourrierContent letter(SendCourrierContentLetter letter) {
-    this.letter = letter;
+  public InlineResponse20019QuotasPlan name(String name) {
+    this.name = name;
     return this;
   }
 
    /**
-   * Get letter
-   * @return letter
+   * Nom du plan actuellement souscrit
+   * @return name
   **/
-  @Schema(description = "")
-  public SendCourrierContentLetter getLetter() {
-    return letter;
+  @Schema(description = "Nom du plan actuellement souscrit")
+  public String getName() {
+    return name;
   }
 
-  public void setLetter(SendCourrierContentLetter letter) {
-    this.letter = letter;
+  public void setName(String name) {
+    this.name = name;
   }
 
-  public SendCourrierContent photo(SendCourrierContentPhoto photo) {
-    this.photo = photo;
+  public InlineResponse20019QuotasPlan expire(String expire) {
+    this.expire = expire;
     return this;
   }
 
    /**
-   * Get photo
-   * @return photo
+   * date d&#x27;expiration au format Y-m-d H:i:s
+   * @return expire
   **/
-  @Schema(description = "")
-  public SendCourrierContentPhoto getPhoto() {
-    return photo;
+  @Schema(description = "date d'expiration au format Y-m-d H:i:s")
+  public String getExpire() {
+    return expire;
   }
 
-  public void setPhoto(SendCourrierContentPhoto photo) {
-    this.photo = photo;
-  }
-
-  public SendCourrierContent card(SendCourrierContentCard card) {
-    this.card = card;
-    return this;
-  }
-
-   /**
-   * Get card
-   * @return card
-  **/
-  @Schema(description = "")
-  public SendCourrierContentCard getCard() {
-    return card;
-  }
-
-  public void setCard(SendCourrierContentCard card) {
-    this.card = card;
+  public void setExpire(String expire) {
+    this.expire = expire;
   }
 
 
@@ -103,26 +79,24 @@ public class SendCourrierContent {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SendCourrierContent sendCourrierContent = (SendCourrierContent) o;
-    return Objects.equals(this.letter, sendCourrierContent.letter) &&
-        Objects.equals(this.photo, sendCourrierContent.photo) &&
-        Objects.equals(this.card, sendCourrierContent.card);
+    InlineResponse20019QuotasPlan inlineResponse20019QuotasPlan = (InlineResponse20019QuotasPlan) o;
+    return Objects.equals(this.name, inlineResponse20019QuotasPlan.name) &&
+        Objects.equals(this.expire, inlineResponse20019QuotasPlan.expire);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(letter, photo, card);
+    return Objects.hash(name, expire);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SendCourrierContent {\n");
+    sb.append("class InlineResponse20019QuotasPlan {\n");
     
-    sb.append("    letter: ").append(toIndentedString(letter)).append("\n");
-    sb.append("    photo: ").append(toIndentedString(photo)).append("\n");
-    sb.append("    card: ").append(toIndentedString(card)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    expire: ").append(toIndentedString(expire)).append("\n");
     sb.append("}");
     return sb.toString();
   }

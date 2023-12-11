@@ -30,8 +30,9 @@ import io.swagger.client.model.AdressSendCourrier;
 import io.swagger.client.model.InlineResponse20010;
 import io.swagger.client.model.InlineResponse20011;
 import io.swagger.client.model.InlineResponse20012;
-import io.swagger.client.model.InlineResponse20016;
+import io.swagger.client.model.InlineResponse20013;
 import io.swagger.client.model.InlineResponse20017;
+import io.swagger.client.model.InlineResponse20018;
 import io.swagger.client.model.InlineResponse2002;
 import io.swagger.client.model.InlineResponse2008;
 import io.swagger.client.model.InlineResponse2009;
@@ -357,6 +358,158 @@ public class CourrierApi {
         return call;
     }
     /**
+     * Build call for getLastEvents
+     * @param wwServiceId Votre service Id (required)
+     * @param wwAccessToken Un access token valide (required)
+     * @param nbHeures Compris entre 1 et 48, délai en nombre d&#x27;heures pour définir la plage sur laquelle vous souhaitez extraire les derniers évènements. (required)
+     * @param page Si non spécifié, sera par défaut à 1. Si vous avez plus de 100 évènements sur la plage horaire définie, les résultats seront paginés. (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getLastEventsCall(String wwServiceId, String wwAccessToken, Integer nbHeures, Integer page, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/getLastEvents";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (nbHeures != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("nbHeures", nbHeures));
+        if (page != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (wwServiceId != null)
+        localVarHeaderParams.put("ww-service-id", apiClient.parameterToString(wwServiceId));
+        if (wwAccessToken != null)
+        localVarHeaderParams.put("ww-access-token", apiClient.parameterToString(wwAccessToken));
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getLastEventsValidateBeforeCall(String wwServiceId, String wwAccessToken, Integer nbHeures, Integer page, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'wwServiceId' is set
+        if (wwServiceId == null) {
+            throw new ApiException("Missing the required parameter 'wwServiceId' when calling getLastEvents(Async)");
+        }
+        // verify the required parameter 'wwAccessToken' is set
+        if (wwAccessToken == null) {
+            throw new ApiException("Missing the required parameter 'wwAccessToken' when calling getLastEvents(Async)");
+        }
+        // verify the required parameter 'nbHeures' is set
+        if (nbHeures == null) {
+            throw new ApiException("Missing the required parameter 'nbHeures' when calling getLastEvents(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = getLastEventsCall(wwServiceId, wwAccessToken, nbHeures, page, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Lister les derniers évènements sur vos courriers
+     * Cette opération vous fourni l&#x27;historique des derniers évènements qui ont été executés en relation avec vos courriers. Si vous avez plus de 100 évènements sur la période, le résultat sera paginé.
+     * @param wwServiceId Votre service Id (required)
+     * @param wwAccessToken Un access token valide (required)
+     * @param nbHeures Compris entre 1 et 48, délai en nombre d&#x27;heures pour définir la plage sur laquelle vous souhaitez extraire les derniers évènements. (required)
+     * @param page Si non spécifié, sera par défaut à 1. Si vous avez plus de 100 évènements sur la plage horaire définie, les résultats seront paginés. (optional)
+     * @return InlineResponse20013
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public InlineResponse20013 getLastEvents(String wwServiceId, String wwAccessToken, Integer nbHeures, Integer page) throws ApiException {
+        ApiResponse<InlineResponse20013> resp = getLastEventsWithHttpInfo(wwServiceId, wwAccessToken, nbHeures, page);
+        return resp.getData();
+    }
+
+    /**
+     * Lister les derniers évènements sur vos courriers
+     * Cette opération vous fourni l&#x27;historique des derniers évènements qui ont été executés en relation avec vos courriers. Si vous avez plus de 100 évènements sur la période, le résultat sera paginé.
+     * @param wwServiceId Votre service Id (required)
+     * @param wwAccessToken Un access token valide (required)
+     * @param nbHeures Compris entre 1 et 48, délai en nombre d&#x27;heures pour définir la plage sur laquelle vous souhaitez extraire les derniers évènements. (required)
+     * @param page Si non spécifié, sera par défaut à 1. Si vous avez plus de 100 évènements sur la plage horaire définie, les résultats seront paginés. (optional)
+     * @return ApiResponse&lt;InlineResponse20013&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<InlineResponse20013> getLastEventsWithHttpInfo(String wwServiceId, String wwAccessToken, Integer nbHeures, Integer page) throws ApiException {
+        com.squareup.okhttp.Call call = getLastEventsValidateBeforeCall(wwServiceId, wwAccessToken, nbHeures, page, null, null);
+        Type localVarReturnType = new TypeToken<InlineResponse20013>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Lister les derniers évènements sur vos courriers (asynchronously)
+     * Cette opération vous fourni l&#x27;historique des derniers évènements qui ont été executés en relation avec vos courriers. Si vous avez plus de 100 évènements sur la période, le résultat sera paginé.
+     * @param wwServiceId Votre service Id (required)
+     * @param wwAccessToken Un access token valide (required)
+     * @param nbHeures Compris entre 1 et 48, délai en nombre d&#x27;heures pour définir la plage sur laquelle vous souhaitez extraire les derniers évènements. (required)
+     * @param page Si non spécifié, sera par défaut à 1. Si vous avez plus de 100 évènements sur la plage horaire définie, les résultats seront paginés. (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getLastEventsAsync(String wwServiceId, String wwAccessToken, Integer nbHeures, Integer page, final ApiCallback<InlineResponse20013> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getLastEventsValidateBeforeCall(wwServiceId, wwAccessToken, nbHeures, page, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<InlineResponse20013>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for getPostagePrice
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
@@ -665,11 +818,11 @@ public class CourrierApi {
      * @param wwAccessToken Un access token valide (required)
      * @param trackingNumber Numéro de suivi du courrier. (required)
      * @param document Le document de preuve souhaité : depot (preuve de dépôt), reception (avis de réception), ou telechargement (preuve de téléchargement). (required)
-     * @return InlineResponse20017
+     * @return InlineResponse20018
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20017 getProof(String wwServiceId, String wwAccessToken, String trackingNumber, String document) throws ApiException {
-        ApiResponse<InlineResponse20017> resp = getProofWithHttpInfo(wwServiceId, wwAccessToken, trackingNumber, document);
+    public InlineResponse20018 getProof(String wwServiceId, String wwAccessToken, String trackingNumber, String document) throws ApiException {
+        ApiResponse<InlineResponse20018> resp = getProofWithHttpInfo(wwServiceId, wwAccessToken, trackingNumber, document);
         return resp.getData();
     }
 
@@ -680,12 +833,12 @@ public class CourrierApi {
      * @param wwAccessToken Un access token valide (required)
      * @param trackingNumber Numéro de suivi du courrier. (required)
      * @param document Le document de preuve souhaité : depot (preuve de dépôt), reception (avis de réception), ou telechargement (preuve de téléchargement). (required)
-     * @return ApiResponse&lt;InlineResponse20017&gt;
+     * @return ApiResponse&lt;InlineResponse20018&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20017> getProofWithHttpInfo(String wwServiceId, String wwAccessToken, String trackingNumber, String document) throws ApiException {
+    public ApiResponse<InlineResponse20018> getProofWithHttpInfo(String wwServiceId, String wwAccessToken, String trackingNumber, String document) throws ApiException {
         com.squareup.okhttp.Call call = getProofValidateBeforeCall(wwServiceId, wwAccessToken, trackingNumber, document, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20017>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20018>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -700,7 +853,7 @@ public class CourrierApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getProofAsync(String wwServiceId, String wwAccessToken, String trackingNumber, String document, final ApiCallback<InlineResponse20017> callback) throws ApiException {
+    public com.squareup.okhttp.Call getProofAsync(String wwServiceId, String wwAccessToken, String trackingNumber, String document, final ApiCallback<InlineResponse20018> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -722,7 +875,7 @@ public class CourrierApi {
         }
 
         com.squareup.okhttp.Call call = getProofValidateBeforeCall(wwServiceId, wwAccessToken, trackingNumber, document, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20017>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20018>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -813,11 +966,11 @@ public class CourrierApi {
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
      * @param idEnvoi Id de l&#x27;envoi dont on veut extraire le suivi. (required)
-     * @return InlineResponse20016
+     * @return InlineResponse20017
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20016 getSuiviEnvoi(String wwServiceId, String wwAccessToken, Integer idEnvoi) throws ApiException {
-        ApiResponse<InlineResponse20016> resp = getSuiviEnvoiWithHttpInfo(wwServiceId, wwAccessToken, idEnvoi);
+    public InlineResponse20017 getSuiviEnvoi(String wwServiceId, String wwAccessToken, Integer idEnvoi) throws ApiException {
+        ApiResponse<InlineResponse20017> resp = getSuiviEnvoiWithHttpInfo(wwServiceId, wwAccessToken, idEnvoi);
         return resp.getData();
     }
 
@@ -827,12 +980,12 @@ public class CourrierApi {
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
      * @param idEnvoi Id de l&#x27;envoi dont on veut extraire le suivi. (required)
-     * @return ApiResponse&lt;InlineResponse20016&gt;
+     * @return ApiResponse&lt;InlineResponse20017&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20016> getSuiviEnvoiWithHttpInfo(String wwServiceId, String wwAccessToken, Integer idEnvoi) throws ApiException {
+    public ApiResponse<InlineResponse20017> getSuiviEnvoiWithHttpInfo(String wwServiceId, String wwAccessToken, Integer idEnvoi) throws ApiException {
         com.squareup.okhttp.Call call = getSuiviEnvoiValidateBeforeCall(wwServiceId, wwAccessToken, idEnvoi, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20016>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20017>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -846,7 +999,7 @@ public class CourrierApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSuiviEnvoiAsync(String wwServiceId, String wwAccessToken, Integer idEnvoi, final ApiCallback<InlineResponse20016> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSuiviEnvoiAsync(String wwServiceId, String wwAccessToken, Integer idEnvoi, final ApiCallback<InlineResponse20017> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -868,7 +1021,7 @@ public class CourrierApi {
         }
 
         com.squareup.okhttp.Call call = getSuiviEnvoiValidateBeforeCall(wwServiceId, wwAccessToken, idEnvoi, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20016>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20017>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

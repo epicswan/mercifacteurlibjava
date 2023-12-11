@@ -19,79 +19,76 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.SendCourrierContentCard;
-import io.swagger.client.model.SendCourrierContentLetter;
-import io.swagger.client.model.SendCourrierContentPhoto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * Contenu du courrier à envoyer
+ * Infos sur les pages envoyées
  */
-@Schema(description = "Contenu du courrier à envoyer")
+@Schema(description = "Infos sur les pages envoyées")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
-public class SendCourrierContent {
-  @SerializedName("letter")
-  private SendCourrierContentLetter letter = null;
+public class InlineResponse20019QuotasPages {
+  @SerializedName("thisMounth")
+  private Integer thisMounth = null;
 
-  @SerializedName("photo")
-  private SendCourrierContentPhoto photo = null;
+  @SerializedName("maxMounth")
+  private Integer maxMounth = null;
 
-  @SerializedName("card")
-  private SendCourrierContentCard card = null;
+  @SerializedName("total")
+  private Integer total = null;
 
-  public SendCourrierContent letter(SendCourrierContentLetter letter) {
-    this.letter = letter;
+  public InlineResponse20019QuotasPages thisMounth(Integer thisMounth) {
+    this.thisMounth = thisMounth;
     return this;
   }
 
    /**
-   * Get letter
-   * @return letter
+   * Nombre de pages envoyées dans le mois courant
+   * @return thisMounth
   **/
-  @Schema(description = "")
-  public SendCourrierContentLetter getLetter() {
-    return letter;
+  @Schema(description = "Nombre de pages envoyées dans le mois courant")
+  public Integer getThisMounth() {
+    return thisMounth;
   }
 
-  public void setLetter(SendCourrierContentLetter letter) {
-    this.letter = letter;
+  public void setThisMounth(Integer thisMounth) {
+    this.thisMounth = thisMounth;
   }
 
-  public SendCourrierContent photo(SendCourrierContentPhoto photo) {
-    this.photo = photo;
+  public InlineResponse20019QuotasPages maxMounth(Integer maxMounth) {
+    this.maxMounth = maxMounth;
     return this;
   }
 
    /**
-   * Get photo
-   * @return photo
+   * Nombre maximum de pages par mois
+   * @return maxMounth
   **/
-  @Schema(description = "")
-  public SendCourrierContentPhoto getPhoto() {
-    return photo;
+  @Schema(description = "Nombre maximum de pages par mois")
+  public Integer getMaxMounth() {
+    return maxMounth;
   }
 
-  public void setPhoto(SendCourrierContentPhoto photo) {
-    this.photo = photo;
+  public void setMaxMounth(Integer maxMounth) {
+    this.maxMounth = maxMounth;
   }
 
-  public SendCourrierContent card(SendCourrierContentCard card) {
-    this.card = card;
+  public InlineResponse20019QuotasPages total(Integer total) {
+    this.total = total;
     return this;
   }
 
    /**
-   * Get card
-   * @return card
+   * Nombre total de pages envoyées depuis la création du compte
+   * @return total
   **/
-  @Schema(description = "")
-  public SendCourrierContentCard getCard() {
-    return card;
+  @Schema(description = "Nombre total de pages envoyées depuis la création du compte")
+  public Integer getTotal() {
+    return total;
   }
 
-  public void setCard(SendCourrierContentCard card) {
-    this.card = card;
+  public void setTotal(Integer total) {
+    this.total = total;
   }
 
 
@@ -103,26 +100,26 @@ public class SendCourrierContent {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SendCourrierContent sendCourrierContent = (SendCourrierContent) o;
-    return Objects.equals(this.letter, sendCourrierContent.letter) &&
-        Objects.equals(this.photo, sendCourrierContent.photo) &&
-        Objects.equals(this.card, sendCourrierContent.card);
+    InlineResponse20019QuotasPages inlineResponse20019QuotasPages = (InlineResponse20019QuotasPages) o;
+    return Objects.equals(this.thisMounth, inlineResponse20019QuotasPages.thisMounth) &&
+        Objects.equals(this.maxMounth, inlineResponse20019QuotasPages.maxMounth) &&
+        Objects.equals(this.total, inlineResponse20019QuotasPages.total);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(letter, photo, card);
+    return Objects.hash(thisMounth, maxMounth, total);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SendCourrierContent {\n");
+    sb.append("class InlineResponse20019QuotasPages {\n");
     
-    sb.append("    letter: ").append(toIndentedString(letter)).append("\n");
-    sb.append("    photo: ").append(toIndentedString(photo)).append("\n");
-    sb.append("    card: ").append(toIndentedString(card)).append("\n");
+    sb.append("    thisMounth: ").append(toIndentedString(thisMounth)).append("\n");
+    sb.append("    maxMounth: ").append(toIndentedString(maxMounth)).append("\n");
+    sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");
     return sb.toString();
   }

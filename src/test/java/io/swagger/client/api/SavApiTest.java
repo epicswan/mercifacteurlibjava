@@ -12,7 +12,7 @@
 
 package io.swagger.client.api;
 
-import io.swagger.client.model.InlineResponse20015;
+import io.swagger.client.model.InlineResponse20016;
 import io.swagger.client.model.InlineResponse400;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -49,7 +49,7 @@ public class SavApiTest {
         String referenceCourrier = null;
         String sujet = null;
         String messageTexte = null;
-        InlineResponse20015 response = api.openSavTicket(wwServiceId, wwAccessToken, yourServiceName, email, referenceCourrier, sujet, messageTexte);
+        InlineResponse20016 response = api.openSavTicket(wwServiceId, wwAccessToken, yourServiceName, email, referenceCourrier, sujet, messageTexte);
 
         // TODO: test validations
     }

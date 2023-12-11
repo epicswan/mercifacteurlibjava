@@ -25,7 +25,7 @@ import java.io.IOException;
  * URL du fichier csv/txt, sa version encodée en base64, ou le json des données.
  */
 @Schema(description = "URL du fichier csv/txt, sa version encodée en base64, ou le json des données.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class SourcePublipostageSource {
   /**

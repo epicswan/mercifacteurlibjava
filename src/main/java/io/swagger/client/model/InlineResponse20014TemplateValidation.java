@@ -27,9 +27,9 @@ import java.util.List;
  * Les informations du template. Il convient de contrôler les champs de fusion extraits pour vous assurer qu&#x27;il n&#x27;y a pas d&#x27;erreur.
  */
 @Schema(description = "Les informations du template. Il convient de contrôler les champs de fusion extraits pour vous assurer qu'il n'y a pas d'erreur.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
-public class InlineResponse20013TemplateValidation {
+public class InlineResponse20014TemplateValidation {
   @SerializedName("timeTemplate")
   private Integer timeTemplate = null;
 
@@ -45,7 +45,7 @@ public class InlineResponse20013TemplateValidation {
   @SerializedName("nbPage")
   private Integer nbPage = null;
 
-  public InlineResponse20013TemplateValidation timeTemplate(Integer timeTemplate) {
+  public InlineResponse20014TemplateValidation timeTemplate(Integer timeTemplate) {
     this.timeTemplate = timeTemplate;
     return this;
   }
@@ -63,7 +63,7 @@ public class InlineResponse20013TemplateValidation {
     this.timeTemplate = timeTemplate;
   }
 
-  public InlineResponse20013TemplateValidation template(String template) {
+  public InlineResponse20014TemplateValidation template(String template) {
     this.template = template;
     return this;
   }
@@ -81,12 +81,12 @@ public class InlineResponse20013TemplateValidation {
     this.template = template;
   }
 
-  public InlineResponse20013TemplateValidation inputs(List<String> inputs) {
+  public InlineResponse20014TemplateValidation inputs(List<String> inputs) {
     this.inputs = inputs;
     return this;
   }
 
-  public InlineResponse20013TemplateValidation addInputsItem(String inputsItem) {
+  public InlineResponse20014TemplateValidation addInputsItem(String inputsItem) {
     if (this.inputs == null) {
       this.inputs = new ArrayList<String>();
     }
@@ -107,7 +107,7 @@ public class InlineResponse20013TemplateValidation {
     this.inputs = inputs;
   }
 
-  public InlineResponse20013TemplateValidation key(String key) {
+  public InlineResponse20014TemplateValidation key(String key) {
     this.key = key;
     return this;
   }
@@ -125,7 +125,7 @@ public class InlineResponse20013TemplateValidation {
     this.key = key;
   }
 
-  public InlineResponse20013TemplateValidation nbPage(Integer nbPage) {
+  public InlineResponse20014TemplateValidation nbPage(Integer nbPage) {
     this.nbPage = nbPage;
     return this;
   }
@@ -152,12 +152,12 @@ public class InlineResponse20013TemplateValidation {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse20013TemplateValidation inlineResponse20013TemplateValidation = (InlineResponse20013TemplateValidation) o;
-    return Objects.equals(this.timeTemplate, inlineResponse20013TemplateValidation.timeTemplate) &&
-        Objects.equals(this.template, inlineResponse20013TemplateValidation.template) &&
-        Objects.equals(this.inputs, inlineResponse20013TemplateValidation.inputs) &&
-        Objects.equals(this.key, inlineResponse20013TemplateValidation.key) &&
-        Objects.equals(this.nbPage, inlineResponse20013TemplateValidation.nbPage);
+    InlineResponse20014TemplateValidation inlineResponse20014TemplateValidation = (InlineResponse20014TemplateValidation) o;
+    return Objects.equals(this.timeTemplate, inlineResponse20014TemplateValidation.timeTemplate) &&
+        Objects.equals(this.template, inlineResponse20014TemplateValidation.template) &&
+        Objects.equals(this.inputs, inlineResponse20014TemplateValidation.inputs) &&
+        Objects.equals(this.key, inlineResponse20014TemplateValidation.key) &&
+        Objects.equals(this.nbPage, inlineResponse20014TemplateValidation.nbPage);
   }
 
   @Override
@@ -169,7 +169,7 @@ public class InlineResponse20013TemplateValidation {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse20013TemplateValidation {\n");
+    sb.append("class InlineResponse20014TemplateValidation {\n");
     
     sb.append("    timeTemplate: ").append(toIndentedString(timeTemplate)).append("\n");
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
