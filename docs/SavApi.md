@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="openSavTicket"></a>
 # **openSavTicket**
-> InlineResponse20015 openSavTicket(wwServiceId, wwAccessToken, yourServiceName, email, referenceCourrier, sujet, messageTexte)
+> InlineResponse20016 openSavTicket(wwServiceId, wwAccessToken, yourServiceName, email, referenceCourrier, sujet, messageTexte)
 
 Ouvrir un ticket SAV auprès de Merci facteur
 
@@ -30,7 +30,7 @@ String referenceCourrier = "referenceCourrier_example"; // String |
 String sujet = "sujet_example"; // String | 
 String messageTexte = "messageTexte_example"; // String | 
 try {
-    InlineResponse20015 result = apiInstance.openSavTicket(wwServiceId, wwAccessToken, yourServiceName, email, referenceCourrier, sujet, messageTexte);
+    InlineResponse20016 result = apiInstance.openSavTicket(wwServiceId, wwAccessToken, yourServiceName, email, referenceCourrier, sujet, messageTexte);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SavApi#openSavTicket");
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 

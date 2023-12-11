@@ -12,7 +12,7 @@
 
 package io.swagger.client.api;
 
-import io.swagger.client.model.InlineResponse20020;
+import io.swagger.client.model.InlineResponse20021;
 import io.swagger.client.model.InlineResponse400;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -44,7 +44,7 @@ public class ErrorsApiTest {
     public void listErrorsTest() throws Exception {
         String wwServiceId = null;
         String wwAccessToken = null;
-        InlineResponse20020 response = api.listErrors(wwServiceId, wwAccessToken);
+        InlineResponse20021 response = api.listErrors(wwServiceId, wwAccessToken);
 
         // TODO: test validations
     }

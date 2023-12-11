@@ -1,4 +1,4 @@
-# InlineResponse20018QuotasCredit
+# InlineResponse20019QuotasCredit
 
 ## Properties
 Name | Type | Description | Notes

@@ -26,7 +26,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.InlineResponse20020;
+import io.swagger.client.model.InlineResponse20021;
 import io.swagger.client.model.InlineResponse400;
 
 import java.lang.reflect.Type;
@@ -133,11 +133,11 @@ public class ErrorsApi {
      * Vous pouvez personnaliser tous les messages d&#x27;erreur en fonction des codes d&#x27;erreur retournés par l&#x27;API. Chaque erreur est identifiée par un code d&#x27;erreur qui ne changera jamais. Ce code d&#x27;erreur est retourné dans l&#x27;entête (en erreur 400 ou 401), ainsi que dans le résultat tel que result[error][code].
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
-     * @return InlineResponse20020
+     * @return InlineResponse20021
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20020 listErrors(String wwServiceId, String wwAccessToken) throws ApiException {
-        ApiResponse<InlineResponse20020> resp = listErrorsWithHttpInfo(wwServiceId, wwAccessToken);
+    public InlineResponse20021 listErrors(String wwServiceId, String wwAccessToken) throws ApiException {
+        ApiResponse<InlineResponse20021> resp = listErrorsWithHttpInfo(wwServiceId, wwAccessToken);
         return resp.getData();
     }
 
@@ -146,12 +146,12 @@ public class ErrorsApi {
      * Vous pouvez personnaliser tous les messages d&#x27;erreur en fonction des codes d&#x27;erreur retournés par l&#x27;API. Chaque erreur est identifiée par un code d&#x27;erreur qui ne changera jamais. Ce code d&#x27;erreur est retourné dans l&#x27;entête (en erreur 400 ou 401), ainsi que dans le résultat tel que result[error][code].
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
-     * @return ApiResponse&lt;InlineResponse20020&gt;
+     * @return ApiResponse&lt;InlineResponse20021&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20020> listErrorsWithHttpInfo(String wwServiceId, String wwAccessToken) throws ApiException {
+    public ApiResponse<InlineResponse20021> listErrorsWithHttpInfo(String wwServiceId, String wwAccessToken) throws ApiException {
         com.squareup.okhttp.Call call = listErrorsValidateBeforeCall(wwServiceId, wwAccessToken, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20020>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20021>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -164,7 +164,7 @@ public class ErrorsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listErrorsAsync(String wwServiceId, String wwAccessToken, final ApiCallback<InlineResponse20020> callback) throws ApiException {
+    public com.squareup.okhttp.Call listErrorsAsync(String wwServiceId, String wwAccessToken, final ApiCallback<InlineResponse20021> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -186,7 +186,7 @@ public class ErrorsApi {
         }
 
         com.squareup.okhttp.Call call = listErrorsValidateBeforeCall(wwServiceId, wwAccessToken, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20020>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20021>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

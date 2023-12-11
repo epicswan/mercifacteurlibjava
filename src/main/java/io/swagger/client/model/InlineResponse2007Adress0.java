@@ -25,7 +25,7 @@ import java.io.IOException;
  * La clé de chaque adresse est l&#x27;id de cette adresse
  */
 @Schema(description = "La clé de chaque adresse est l'id de cette adresse")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class InlineResponse2007Adress0 {
   @SerializedName("id")

@@ -26,8 +26,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.InlineResponse20013;
 import io.swagger.client.model.InlineResponse20014;
+import io.swagger.client.model.InlineResponse20015;
 import io.swagger.client.model.InlineResponse2009;
 import io.swagger.client.model.InlineResponse400;
 import io.swagger.client.model.SendCourrierAnonymize;
@@ -347,11 +347,11 @@ public class PublipostageApi {
      * @param source  (required)
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
-     * @return InlineResponse20014
+     * @return InlineResponse20015
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20014 sourcePublipostage(Integer idUser, Object templateValidation, SourcePublipostageSource source, String wwServiceId, String wwAccessToken) throws ApiException {
-        ApiResponse<InlineResponse20014> resp = sourcePublipostageWithHttpInfo(idUser, templateValidation, source, wwServiceId, wwAccessToken);
+    public InlineResponse20015 sourcePublipostage(Integer idUser, Object templateValidation, SourcePublipostageSource source, String wwServiceId, String wwAccessToken) throws ApiException {
+        ApiResponse<InlineResponse20015> resp = sourcePublipostageWithHttpInfo(idUser, templateValidation, source, wwServiceId, wwAccessToken);
         return resp.getData();
     }
 
@@ -363,12 +363,12 @@ public class PublipostageApi {
      * @param source  (required)
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
-     * @return ApiResponse&lt;InlineResponse20014&gt;
+     * @return ApiResponse&lt;InlineResponse20015&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20014> sourcePublipostageWithHttpInfo(Integer idUser, Object templateValidation, SourcePublipostageSource source, String wwServiceId, String wwAccessToken) throws ApiException {
+    public ApiResponse<InlineResponse20015> sourcePublipostageWithHttpInfo(Integer idUser, Object templateValidation, SourcePublipostageSource source, String wwServiceId, String wwAccessToken) throws ApiException {
         com.squareup.okhttp.Call call = sourcePublipostageValidateBeforeCall(idUser, templateValidation, source, wwServiceId, wwAccessToken, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20014>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20015>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -384,7 +384,7 @@ public class PublipostageApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call sourcePublipostageAsync(Integer idUser, Object templateValidation, SourcePublipostageSource source, String wwServiceId, String wwAccessToken, final ApiCallback<InlineResponse20014> callback) throws ApiException {
+    public com.squareup.okhttp.Call sourcePublipostageAsync(Integer idUser, Object templateValidation, SourcePublipostageSource source, String wwServiceId, String wwAccessToken, final ApiCallback<InlineResponse20015> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -406,7 +406,7 @@ public class PublipostageApi {
         }
 
         com.squareup.okhttp.Call call = sourcePublipostageValidateBeforeCall(idUser, templateValidation, source, wwServiceId, wwAccessToken, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20014>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20015>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -505,11 +505,11 @@ public class PublipostageApi {
      * @param template  (required)
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
-     * @return InlineResponse20013
+     * @return InlineResponse20014
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20013 templatePublipostage(String typeTemplate, String template, String wwServiceId, String wwAccessToken) throws ApiException {
-        ApiResponse<InlineResponse20013> resp = templatePublipostageWithHttpInfo(typeTemplate, template, wwServiceId, wwAccessToken);
+    public InlineResponse20014 templatePublipostage(String typeTemplate, String template, String wwServiceId, String wwAccessToken) throws ApiException {
+        ApiResponse<InlineResponse20014> resp = templatePublipostageWithHttpInfo(typeTemplate, template, wwServiceId, wwAccessToken);
         return resp.getData();
     }
 
@@ -520,12 +520,12 @@ public class PublipostageApi {
      * @param template  (required)
      * @param wwServiceId Votre service Id (required)
      * @param wwAccessToken Un access token valide (required)
-     * @return ApiResponse&lt;InlineResponse20013&gt;
+     * @return ApiResponse&lt;InlineResponse20014&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20013> templatePublipostageWithHttpInfo(String typeTemplate, String template, String wwServiceId, String wwAccessToken) throws ApiException {
+    public ApiResponse<InlineResponse20014> templatePublipostageWithHttpInfo(String typeTemplate, String template, String wwServiceId, String wwAccessToken) throws ApiException {
         com.squareup.okhttp.Call call = templatePublipostageValidateBeforeCall(typeTemplate, template, wwServiceId, wwAccessToken, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20013>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20014>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -540,7 +540,7 @@ public class PublipostageApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call templatePublipostageAsync(String typeTemplate, String template, String wwServiceId, String wwAccessToken, final ApiCallback<InlineResponse20013> callback) throws ApiException {
+    public com.squareup.okhttp.Call templatePublipostageAsync(String typeTemplate, String template, String wwServiceId, String wwAccessToken, final ApiCallback<InlineResponse20014> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -562,7 +562,7 @@ public class PublipostageApi {
         }
 
         com.squareup.okhttp.Call call = templatePublipostageValidateBeforeCall(typeTemplate, template, wwServiceId, wwAccessToken, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20013>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20014>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

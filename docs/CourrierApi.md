@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteEnvoi**](CourrierApi.md#deleteEnvoi) | **DELETE** /deleteEnvoi | Annuler un envoi et son contenu
 [**getEnvoi**](CourrierApi.md#getEnvoi) | **GET** /getEnvoi | Lister les courriers d&#x27;un envoi en particulier
+[**getLastEvents**](CourrierApi.md#getLastEvents) | **GET** /getLastEvents | Lister les derniers évènements sur vos courriers
 [**getPostagePrice**](CourrierApi.md#getPostagePrice) | **GET** /getPostagePrice | Obtenir le montant d&#x27;un ou plusieurs courriers (non nécessaire à l&#x27;envoi)
 [**getProof**](CourrierApi.md#getProof) | **GET** /getProof | Obtenir les documents preuves d&#x27;un courrier (preuve de dépôt, preuve de réception, preuve de télechargement, etc.)
 [**getSuiviEnvoi**](CourrierApi.md#getSuiviEnvoi) | **GET** /getSuiviEnvoi | Obtenir le suivi et l&#x27;état des courriers d&#x27;un envoi
@@ -111,6 +112,57 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="getLastEvents"></a>
+# **getLastEvents**
+> InlineResponse20013 getLastEvents(wwServiceId, wwAccessToken, nbHeures, page)
+
+Lister les derniers évènements sur vos courriers
+
+Cette opération vous fourni l&#x27;historique des derniers évènements qui ont été executés en relation avec vos courriers. Si vous avez plus de 100 évènements sur la période, le résultat sera paginé.
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.CourrierApi;
+
+
+CourrierApi apiInstance = new CourrierApi();
+String wwServiceId = "\"yourIdService\""; // String | Votre service Id
+String wwAccessToken = "\"ValidAccessToken\""; // String | Un access token valide
+Integer nbHeures = 56; // Integer | Compris entre 1 et 48, délai en nombre d'heures pour définir la plage sur laquelle vous souhaitez extraire les derniers évènements.
+Integer page = 56; // Integer | Si non spécifié, sera par défaut à 1. Si vous avez plus de 100 évènements sur la plage horaire définie, les résultats seront paginés.
+try {
+    InlineResponse20013 result = apiInstance.getLastEvents(wwServiceId, wwAccessToken, nbHeures, page);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CourrierApi#getLastEvents");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **wwServiceId** | **String**| Votre service Id |
+ **wwAccessToken** | **String**| Un access token valide |
+ **nbHeures** | **Integer**| Compris entre 1 et 48, délai en nombre d&#x27;heures pour définir la plage sur laquelle vous souhaitez extraire les derniers évènements. |
+ **page** | **Integer**| Si non spécifié, sera par défaut à 1. Si vous avez plus de 100 évènements sur la plage horaire définie, les résultats seront paginés. | [optional]
+
+### Return type
+
+[**InlineResponse20013**](InlineResponse20013.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="getPostagePrice"></a>
 # **getPostagePrice**
 > InlineResponse20010 getPostagePrice(wwServiceId, wwAccessToken, modeEnvoi, cardFormat, cardPapier, cardCoin, letterPageNumber, photoNumber, paysDestinataire, idDestinataire, letterPrintSides)
@@ -178,7 +230,7 @@ No authorization required
 
 <a name="getProof"></a>
 # **getProof**
-> InlineResponse20017 getProof(wwServiceId, wwAccessToken, trackingNumber, document)
+> InlineResponse20018 getProof(wwServiceId, wwAccessToken, trackingNumber, document)
 
 Obtenir les documents preuves d&#x27;un courrier (preuve de dépôt, preuve de réception, preuve de télechargement, etc.)
 
@@ -197,7 +249,7 @@ String wwAccessToken = "\"ValidAccessToken\""; // String | Un access token valid
 String trackingNumber = "trackingNumber_example"; // String | Numéro de suivi du courrier.
 String document = "\"depot\""; // String | Le document de preuve souhaité : depot (preuve de dépôt), reception (avis de réception), ou telechargement (preuve de téléchargement).
 try {
-    InlineResponse20017 result = apiInstance.getProof(wwServiceId, wwAccessToken, trackingNumber, document);
+    InlineResponse20018 result = apiInstance.getProof(wwServiceId, wwAccessToken, trackingNumber, document);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CourrierApi#getProof");
@@ -216,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -229,7 +281,7 @@ No authorization required
 
 <a name="getSuiviEnvoi"></a>
 # **getSuiviEnvoi**
-> InlineResponse20016 getSuiviEnvoi(wwServiceId, wwAccessToken, idEnvoi)
+> InlineResponse20017 getSuiviEnvoi(wwServiceId, wwAccessToken, idEnvoi)
 
 Obtenir le suivi et l&#x27;état des courriers d&#x27;un envoi
 
@@ -247,7 +299,7 @@ String wwServiceId = "\"yourIdService\""; // String | Votre service Id
 String wwAccessToken = "\"ValidAccessToken\""; // String | Un access token valide
 Integer idEnvoi = 56; // Integer | Id de l'envoi dont on veut extraire le suivi.
 try {
-    InlineResponse20016 result = apiInstance.getSuiviEnvoi(wwServiceId, wwAccessToken, idEnvoi);
+    InlineResponse20017 result = apiInstance.getSuiviEnvoi(wwServiceId, wwAccessToken, idEnvoi);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CourrierApi#getSuiviEnvoi");
@@ -265,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 

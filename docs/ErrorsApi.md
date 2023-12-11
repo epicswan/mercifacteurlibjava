@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="listErrors"></a>
 # **listErrors**
-> InlineResponse20020 listErrors(wwServiceId, wwAccessToken)
+> InlineResponse20021 listErrors(wwServiceId, wwAccessToken)
 
 Obtenir la liste des erreurs possiblement retournées par l&#x27;API.
 
@@ -25,7 +25,7 @@ ErrorsApi apiInstance = new ErrorsApi();
 String wwServiceId = "\"yourIdService\""; // String | Votre service Id
 String wwAccessToken = "\"ValidAccessToken\""; // String | Un access token valide
 try {
-    InlineResponse20020 result = apiInstance.listErrors(wwServiceId, wwAccessToken);
+    InlineResponse20021 result = apiInstance.listErrors(wwServiceId, wwAccessToken);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ErrorsApi#listErrors");
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20021**](InlineResponse20021.md)
 
 ### Authorization
 

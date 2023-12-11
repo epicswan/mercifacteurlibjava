@@ -67,7 +67,7 @@ No authorization required
 
 <a name="sourcePublipostage"></a>
 # **sourcePublipostage**
-> InlineResponse20014 sourcePublipostage(idUser, templateValidation, source, wwServiceId, wwAccessToken)
+> InlineResponse20015 sourcePublipostage(idUser, templateValidation, source, wwServiceId, wwAccessToken)
 
 Envoi de la source de données du publipostage
 
@@ -87,7 +87,7 @@ SourcePublipostageSource source = new SourcePublipostageSource(); // SourcePubli
 String wwServiceId = "\"yourIdService\""; // String | Votre service Id
 String wwAccessToken = "\"ValidAccessToken\""; // String | Un access token valide
 try {
-    InlineResponse20014 result = apiInstance.sourcePublipostage(idUser, templateValidation, source, wwServiceId, wwAccessToken);
+    InlineResponse20015 result = apiInstance.sourcePublipostage(idUser, templateValidation, source, wwServiceId, wwAccessToken);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PublipostageApi#sourcePublipostage");
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ No authorization required
 
 <a name="templatePublipostage"></a>
 # **templatePublipostage**
-> InlineResponse20013 templatePublipostage(typeTemplate, template, wwServiceId, wwAccessToken)
+> InlineResponse20014 templatePublipostage(typeTemplate, template, wwServiceId, wwAccessToken)
 
 Envoi du template de la lettre à envoyer en nombre
 
@@ -139,7 +139,7 @@ String template = "template_example"; // String |
 String wwServiceId = "\"yourIdService\""; // String | Votre service Id
 String wwAccessToken = "\"ValidAccessToken\""; // String | Un access token valide
 try {
-    InlineResponse20013 result = apiInstance.templatePublipostage(typeTemplate, template, wwServiceId, wwAccessToken);
+    InlineResponse20014 result = apiInstance.templatePublipostage(typeTemplate, template, wwServiceId, wwAccessToken);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PublipostageApi#templatePublipostage");
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 

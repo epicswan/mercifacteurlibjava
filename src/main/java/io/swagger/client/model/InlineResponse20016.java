@@ -19,16 +19,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.InlineResponse20016SuiviCourrier;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 /**
  * InlineResponse20016
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class InlineResponse20016 {
   @SerializedName("success")
@@ -37,11 +34,11 @@ public class InlineResponse20016 {
   @SerializedName("error")
   private String error = null;
 
-  @SerializedName("statutPrintEnvoi")
-  private String statutPrintEnvoi = null;
+  @SerializedName("sav_id")
+  private String savId = null;
 
-  @SerializedName("suiviCourrier")
-  private List<InlineResponse20016SuiviCourrier> suiviCourrier = null;
+  @SerializedName("sav_token")
+  private String savToken = null;
 
   public InlineResponse20016 success(Boolean success) {
     this.success = success;
@@ -79,48 +76,40 @@ public class InlineResponse20016 {
     this.error = error;
   }
 
-  public InlineResponse20016 statutPrintEnvoi(String statutPrintEnvoi) {
-    this.statutPrintEnvoi = statutPrintEnvoi;
+  public InlineResponse20016 savId(String savId) {
+    this.savId = savId;
     return this;
   }
 
    /**
-   * Le statut de l&#x27;impression des courriers (exemples \&quot;Traitement en attente\&quot;,\&quot;Génération des courriers en cours\&quot;, \&quot;Préparation en cours\&quot;, \&quot;Impression en attente\&quot;, \&quot;Impression en cours\&quot;, \&quot;Impression terminée\&quot;)
-   * @return statutPrintEnvoi
+   * L&#x27;id du ticket SAV
+   * @return savId
   **/
-  @Schema(description = "Le statut de l'impression des courriers (exemples \"Traitement en attente\",\"Génération des courriers en cours\", \"Préparation en cours\", \"Impression en attente\", \"Impression en cours\", \"Impression terminée\")")
-  public String getStatutPrintEnvoi() {
-    return statutPrintEnvoi;
+  @Schema(description = "L'id du ticket SAV")
+  public String getSavId() {
+    return savId;
   }
 
-  public void setStatutPrintEnvoi(String statutPrintEnvoi) {
-    this.statutPrintEnvoi = statutPrintEnvoi;
+  public void setSavId(String savId) {
+    this.savId = savId;
   }
 
-  public InlineResponse20016 suiviCourrier(List<InlineResponse20016SuiviCourrier> suiviCourrier) {
-    this.suiviCourrier = suiviCourrier;
-    return this;
-  }
-
-  public InlineResponse20016 addSuiviCourrierItem(InlineResponse20016SuiviCourrier suiviCourrierItem) {
-    if (this.suiviCourrier == null) {
-      this.suiviCourrier = new ArrayList<InlineResponse20016SuiviCourrier>();
-    }
-    this.suiviCourrier.add(suiviCourrierItem);
+  public InlineResponse20016 savToken(String savToken) {
+    this.savToken = savToken;
     return this;
   }
 
    /**
-   * Les infos de suivi de chaque courrier constituant cet envoi
-   * @return suiviCourrier
+   * Le token du ticket SAV
+   * @return savToken
   **/
-  @Schema(description = "Les infos de suivi de chaque courrier constituant cet envoi")
-  public List<InlineResponse20016SuiviCourrier> getSuiviCourrier() {
-    return suiviCourrier;
+  @Schema(description = "Le token du ticket SAV")
+  public String getSavToken() {
+    return savToken;
   }
 
-  public void setSuiviCourrier(List<InlineResponse20016SuiviCourrier> suiviCourrier) {
-    this.suiviCourrier = suiviCourrier;
+  public void setSavToken(String savToken) {
+    this.savToken = savToken;
   }
 
 
@@ -135,13 +124,13 @@ public class InlineResponse20016 {
     InlineResponse20016 inlineResponse20016 = (InlineResponse20016) o;
     return Objects.equals(this.success, inlineResponse20016.success) &&
         Objects.equals(this.error, inlineResponse20016.error) &&
-        Objects.equals(this.statutPrintEnvoi, inlineResponse20016.statutPrintEnvoi) &&
-        Objects.equals(this.suiviCourrier, inlineResponse20016.suiviCourrier);
+        Objects.equals(this.savId, inlineResponse20016.savId) &&
+        Objects.equals(this.savToken, inlineResponse20016.savToken);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(success, error, statutPrintEnvoi, suiviCourrier);
+    return Objects.hash(success, error, savId, savToken);
   }
 
 
@@ -152,8 +141,8 @@ public class InlineResponse20016 {
     
     sb.append("    success: ").append(toIndentedString(success)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    statutPrintEnvoi: ").append(toIndentedString(statutPrintEnvoi)).append("\n");
-    sb.append("    suiviCourrier: ").append(toIndentedString(suiviCourrier)).append("\n");
+    sb.append("    savId: ").append(toIndentedString(savId)).append("\n");
+    sb.append("    savToken: ").append(toIndentedString(savToken)).append("\n");
     sb.append("}");
     return sb.toString();
   }

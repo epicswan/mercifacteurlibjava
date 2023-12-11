@@ -27,7 +27,7 @@ import java.io.IOException;
  * Définition du contenu de la carte, envoyer une chaine vide si pas de carte dans ce courrier (&#x3D;&#x27;&#x27;)
  */
 @Schema(description = "Définition du contenu de la carte, envoyer une chaine vide si pas de carte dans ce courrier (='')")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class SendCourrierContentCard {
   /**

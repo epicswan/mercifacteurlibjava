@@ -19,14 +19,18 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.InlineResponse20013TemplateValidation;
+import io.swagger.client.model.InlineResponse20013Events;
+import io.swagger.client.model.InlineResponse20013NbResults;
+import io.swagger.client.model.InlineResponse20013Pages;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * InlineResponse20013
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class InlineResponse20013 {
   @SerializedName("success")
@@ -35,8 +39,14 @@ public class InlineResponse20013 {
   @SerializedName("error")
   private String error = null;
 
-  @SerializedName("templateValidation")
-  private InlineResponse20013TemplateValidation templateValidation = null;
+  @SerializedName("events")
+  private List<InlineResponse20013Events> events = null;
+
+  @SerializedName("pages")
+  private InlineResponse20013Pages pages = null;
+
+  @SerializedName("nbResults")
+  private InlineResponse20013NbResults nbResults = null;
 
   public InlineResponse20013 success(Boolean success) {
     this.success = success;
@@ -74,22 +84,66 @@ public class InlineResponse20013 {
     this.error = error;
   }
 
-  public InlineResponse20013 templateValidation(InlineResponse20013TemplateValidation templateValidation) {
-    this.templateValidation = templateValidation;
+  public InlineResponse20013 events(List<InlineResponse20013Events> events) {
+    this.events = events;
+    return this;
+  }
+
+  public InlineResponse20013 addEventsItem(InlineResponse20013Events eventsItem) {
+    if (this.events == null) {
+      this.events = new ArrayList<InlineResponse20013Events>();
+    }
+    this.events.add(eventsItem);
     return this;
   }
 
    /**
-   * Get templateValidation
-   * @return templateValidation
+   * Get events
+   * @return events
   **/
   @Schema(description = "")
-  public InlineResponse20013TemplateValidation getTemplateValidation() {
-    return templateValidation;
+  public List<InlineResponse20013Events> getEvents() {
+    return events;
   }
 
-  public void setTemplateValidation(InlineResponse20013TemplateValidation templateValidation) {
-    this.templateValidation = templateValidation;
+  public void setEvents(List<InlineResponse20013Events> events) {
+    this.events = events;
+  }
+
+  public InlineResponse20013 pages(InlineResponse20013Pages pages) {
+    this.pages = pages;
+    return this;
+  }
+
+   /**
+   * Get pages
+   * @return pages
+  **/
+  @Schema(description = "")
+  public InlineResponse20013Pages getPages() {
+    return pages;
+  }
+
+  public void setPages(InlineResponse20013Pages pages) {
+    this.pages = pages;
+  }
+
+  public InlineResponse20013 nbResults(InlineResponse20013NbResults nbResults) {
+    this.nbResults = nbResults;
+    return this;
+  }
+
+   /**
+   * Get nbResults
+   * @return nbResults
+  **/
+  @Schema(description = "")
+  public InlineResponse20013NbResults getNbResults() {
+    return nbResults;
+  }
+
+  public void setNbResults(InlineResponse20013NbResults nbResults) {
+    this.nbResults = nbResults;
   }
 
 
@@ -104,12 +158,14 @@ public class InlineResponse20013 {
     InlineResponse20013 inlineResponse20013 = (InlineResponse20013) o;
     return Objects.equals(this.success, inlineResponse20013.success) &&
         Objects.equals(this.error, inlineResponse20013.error) &&
-        Objects.equals(this.templateValidation, inlineResponse20013.templateValidation);
+        Objects.equals(this.events, inlineResponse20013.events) &&
+        Objects.equals(this.pages, inlineResponse20013.pages) &&
+        Objects.equals(this.nbResults, inlineResponse20013.nbResults);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(success, error, templateValidation);
+    return Objects.hash(success, error, events, pages, nbResults);
   }
 
 
@@ -120,7 +176,9 @@ public class InlineResponse20013 {
     
     sb.append("    success: ").append(toIndentedString(success)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    templateValidation: ").append(toIndentedString(templateValidation)).append("\n");
+    sb.append("    events: ").append(toIndentedString(events)).append("\n");
+    sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
+    sb.append("    nbResults: ").append(toIndentedString(nbResults)).append("\n");
     sb.append("}");
     return sb.toString();
   }

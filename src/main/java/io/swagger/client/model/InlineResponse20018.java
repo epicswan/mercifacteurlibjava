@@ -19,14 +19,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.InlineResponse20018Quotas;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
  * InlineResponse20018
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class InlineResponse20018 {
   @SerializedName("success")
@@ -35,8 +34,11 @@ public class InlineResponse20018 {
   @SerializedName("error")
   private String error = null;
 
-  @SerializedName("quotas")
-  private InlineResponse20018Quotas quotas = null;
+  @SerializedName("format_return")
+  private String formatReturn = null;
+
+  @SerializedName("document")
+  private String document = null;
 
   public InlineResponse20018 success(Boolean success) {
     this.success = success;
@@ -74,22 +76,40 @@ public class InlineResponse20018 {
     this.error = error;
   }
 
-  public InlineResponse20018 quotas(InlineResponse20018Quotas quotas) {
-    this.quotas = quotas;
+  public InlineResponse20018 formatReturn(String formatReturn) {
+    this.formatReturn = formatReturn;
     return this;
   }
 
    /**
-   * Get quotas
-   * @return quotas
+   * Le format du document (jpeg ou pdf).
+   * @return formatReturn
   **/
-  @Schema(description = "")
-  public InlineResponse20018Quotas getQuotas() {
-    return quotas;
+  @Schema(description = "Le format du document (jpeg ou pdf).")
+  public String getFormatReturn() {
+    return formatReturn;
   }
 
-  public void setQuotas(InlineResponse20018Quotas quotas) {
-    this.quotas = quotas;
+  public void setFormatReturn(String formatReturn) {
+    this.formatReturn = formatReturn;
+  }
+
+  public InlineResponse20018 document(String document) {
+    this.document = document;
+    return this;
+  }
+
+   /**
+   * La base64 du document retourné. Pour créer le document en local ou l&#x27;afficher, associez-y la bonne entête en fonction du \&quot;format_return\&quot;.
+   * @return document
+  **/
+  @Schema(description = "La base64 du document retourné. Pour créer le document en local ou l'afficher, associez-y la bonne entête en fonction du \"format_return\".")
+  public String getDocument() {
+    return document;
+  }
+
+  public void setDocument(String document) {
+    this.document = document;
   }
 
 
@@ -104,12 +124,13 @@ public class InlineResponse20018 {
     InlineResponse20018 inlineResponse20018 = (InlineResponse20018) o;
     return Objects.equals(this.success, inlineResponse20018.success) &&
         Objects.equals(this.error, inlineResponse20018.error) &&
-        Objects.equals(this.quotas, inlineResponse20018.quotas);
+        Objects.equals(this.formatReturn, inlineResponse20018.formatReturn) &&
+        Objects.equals(this.document, inlineResponse20018.document);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(success, error, quotas);
+    return Objects.hash(success, error, formatReturn, document);
   }
 
 
@@ -120,7 +141,8 @@ public class InlineResponse20018 {
     
     sb.append("    success: ").append(toIndentedString(success)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    quotas: ").append(toIndentedString(quotas)).append("\n");
+    sb.append("    formatReturn: ").append(toIndentedString(formatReturn)).append("\n");
+    sb.append("    document: ").append(toIndentedString(document)).append("\n");
     sb.append("}");
     return sb.toString();
   }

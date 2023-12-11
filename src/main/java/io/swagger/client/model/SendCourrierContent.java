@@ -28,7 +28,7 @@ import java.io.IOException;
  * Contenu du courrier à envoyer
  */
 @Schema(description = "Contenu du courrier à envoyer")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class SendCourrierContent {
   @SerializedName("letter")

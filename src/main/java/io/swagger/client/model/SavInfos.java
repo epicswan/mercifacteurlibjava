@@ -25,7 +25,7 @@ import java.io.IOException;
  * Les informations nécessaires à l&#x27;ouverture d&#x27;un ticket auprès du service après vente de Merci facteur
  */
 @Schema(description = "Les informations nécessaires à l'ouverture d'un ticket auprès du service après vente de Merci facteur")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
 public class SavInfos {
   @SerializedName("yourServiceName")

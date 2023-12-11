@@ -19,79 +19,55 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.InlineResponse20018QuotasCredit;
-import io.swagger.client.model.InlineResponse20018QuotasPages;
-import io.swagger.client.model.InlineResponse20018QuotasPlan;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * Objet contenant les infos des quotas du compte.
+ * InlineResponse20013Events
  */
-@Schema(description = "Objet contenant les infos des quotas du compte.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-30T14:41:58.166575150Z[GMT]")
 
-public class InlineResponse20018Quotas {
-  @SerializedName("plan")
-  private InlineResponse20018QuotasPlan plan = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-12-11T10:32:30.069126169Z[GMT]")
 
-  @SerializedName("credit")
-  private InlineResponse20018QuotasCredit credit = null;
+public class InlineResponse20013Events {
+  @SerializedName("event")
+  private String event = null;
 
-  @SerializedName("pages")
-  private InlineResponse20018QuotasPages pages = null;
+  @SerializedName("detail")
+  private String detail = null;
 
-  public InlineResponse20018Quotas plan(InlineResponse20018QuotasPlan plan) {
-    this.plan = plan;
+  public InlineResponse20013Events event(String event) {
+    this.event = event;
     return this;
   }
 
    /**
-   * Get plan
-   * @return plan
+   * Type d&#x27;évènement et id utilisateur
+   * @return event
   **/
-  @Schema(description = "")
-  public InlineResponse20018QuotasPlan getPlan() {
-    return plan;
+  @Schema(description = "Type d'évènement et id utilisateur")
+  public String getEvent() {
+    return event;
   }
 
-  public void setPlan(InlineResponse20018QuotasPlan plan) {
-    this.plan = plan;
+  public void setEvent(String event) {
+    this.event = event;
   }
 
-  public InlineResponse20018Quotas credit(InlineResponse20018QuotasCredit credit) {
-    this.credit = credit;
+  public InlineResponse20013Events detail(String detail) {
+    this.detail = detail;
     return this;
   }
 
    /**
-   * Get credit
-   * @return credit
+   * Contenu des évènements
+   * @return detail
   **/
-  @Schema(description = "")
-  public InlineResponse20018QuotasCredit getCredit() {
-    return credit;
+  @Schema(description = "Contenu des évènements")
+  public String getDetail() {
+    return detail;
   }
 
-  public void setCredit(InlineResponse20018QuotasCredit credit) {
-    this.credit = credit;
-  }
-
-  public InlineResponse20018Quotas pages(InlineResponse20018QuotasPages pages) {
-    this.pages = pages;
-    return this;
-  }
-
-   /**
-   * Get pages
-   * @return pages
-  **/
-  @Schema(description = "")
-  public InlineResponse20018QuotasPages getPages() {
-    return pages;
-  }
-
-  public void setPages(InlineResponse20018QuotasPages pages) {
-    this.pages = pages;
+  public void setDetail(String detail) {
+    this.detail = detail;
   }
 
 
@@ -103,26 +79,24 @@ public class InlineResponse20018Quotas {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse20018Quotas inlineResponse20018Quotas = (InlineResponse20018Quotas) o;
-    return Objects.equals(this.plan, inlineResponse20018Quotas.plan) &&
-        Objects.equals(this.credit, inlineResponse20018Quotas.credit) &&
-        Objects.equals(this.pages, inlineResponse20018Quotas.pages);
+    InlineResponse20013Events inlineResponse20013Events = (InlineResponse20013Events) o;
+    return Objects.equals(this.event, inlineResponse20013Events.event) &&
+        Objects.equals(this.detail, inlineResponse20013Events.detail);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(plan, credit, pages);
+    return Objects.hash(event, detail);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse20018Quotas {\n");
+    sb.append("class InlineResponse20013Events {\n");
     
-    sb.append("    plan: ").append(toIndentedString(plan)).append("\n");
-    sb.append("    credit: ").append(toIndentedString(credit)).append("\n");
-    sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
+    sb.append("    event: ").append(toIndentedString(event)).append("\n");
+    sb.append("    detail: ").append(toIndentedString(detail)).append("\n");
     sb.append("}");
     return sb.toString();
   }
