@@ -35,7 +35,7 @@ public class InlineResponse20015 {
   private String error = null;
 
   @SerializedName("idEnvoi")
-  private Integer idEnvoi = null;
+  private Long idEnvoi = null;
 
   @SerializedName("sourceValidation")
   private Object sourceValidation = null;
@@ -76,7 +76,7 @@ public class InlineResponse20015 {
     this.error = error;
   }
 
-  public InlineResponse20015 idEnvoi(Integer idEnvoi) {
+  public InlineResponse20015 idEnvoi(Long idEnvoi) {
     this.idEnvoi = idEnvoi;
     return this;
   }
@@ -86,11 +86,11 @@ public class InlineResponse20015 {
    * @return idEnvoi
   **/
   @Schema(description = "Identifiant de l'envoi pour procéder à sa validation")
-  public Integer getIdEnvoi() {
+  public Long getIdEnvoi() {
     return idEnvoi;
   }
 
-  public void setIdEnvoi(Integer idEnvoi) {
+  public void setIdEnvoi(Long idEnvoi) {
     this.idEnvoi = idEnvoi;
   }
 
