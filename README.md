@@ -2,7 +2,7 @@
 
 Merci facteur API
 - API version: 1.2.7
-  - Build date: 2023-11-30T14:41:58.166575150Z[GMT]
+  - Build date: 2023-12-11T10:32:30.069126169Z[GMT]
 
 Merci facteur PRO vous permet d'envoyer des courriers depuis votre applicatif via son API.     Types de courriers disponibles :   - Lettre de une ou plusieurs pages.  - Carte postale avec ou sans enveloppe  - Carte pliée  - Carte géante  - Carte non pliée  - Photos sur papier brillant    Modes d'envois disponibles :   - Envoi normal (lettre verte)  - Lettre suivie  - Recommandé avec avis de réception      Au sujet des webhooks : [`https://github.com/MerciFacteur/Merci-facteur-API/blob/master/README.md#webhooks`](https://github.com/MerciFacteur/Merci-facteur-API/blob/master/README.md#webhooks)     Librairie PHP et exemples d'intégration : [`https://github.com/MerciFacteur/Merci-facteur-API`](https://github.com/MerciFacteur/Merci-facteur-API)    Infos générales sur l'API : [`https://github.com/MerciFacteur/Merci-facteur-API/blob/master/README.md`](https://github.com/MerciFacteur/Merci-facteur-API/blob/master/README.md)    Plus d'informations sur [`https://www.merci-facteur.com/pro`](https://www.merci-facteur.com/pro)    N'hésitez pas à nous contacter via [`https://www.merci-facteur.com/pro/contact.php`](https://www.merci-facteur.com/pro/contact.php)
 
@@ -246,6 +246,7 @@ Class | Method | HTTP request | Description
 *CompteApi* | [**setWebhookEndpoint**](docs/CompteApi.md#setWebhookEndpoint) | **POST** /setWebhookEndpoint | Définir l&#x27;URL du endpoint sur laquelle les évènements liés à vos courriers seront envoyés via webhooks
 *CourrierApi* | [**deleteEnvoi**](docs/CourrierApi.md#deleteEnvoi) | **DELETE** /deleteEnvoi | Annuler un envoi et son contenu
 *CourrierApi* | [**getEnvoi**](docs/CourrierApi.md#getEnvoi) | **GET** /getEnvoi | Lister les courriers d&#x27;un envoi en particulier
+*CourrierApi* | [**getLastEvents**](docs/CourrierApi.md#getLastEvents) | **GET** /getLastEvents | Lister les derniers évènements sur vos courriers
 *CourrierApi* | [**getPostagePrice**](docs/CourrierApi.md#getPostagePrice) | **GET** /getPostagePrice | Obtenir le montant d&#x27;un ou plusieurs courriers (non nécessaire à l&#x27;envoi)
 *CourrierApi* | [**getProof**](docs/CourrierApi.md#getProof) | **GET** /getProof | Obtenir les documents preuves d&#x27;un courrier (preuve de dépôt, preuve de réception, preuve de télechargement, etc.)
 *CourrierApi* | [**getSuiviEnvoi**](docs/CourrierApi.md#getSuiviEnvoi) | **GET** /getSuiviEnvoi | Obtenir le suivi et l&#x27;état des courriers d&#x27;un envoi
@@ -287,21 +288,25 @@ Class | Method | HTTP request | Description
  - [InlineResponse20012Envoi](docs/InlineResponse20012Envoi.md)
  - [InlineResponse20012General](docs/InlineResponse20012General.md)
  - [InlineResponse20013](docs/InlineResponse20013.md)
- - [InlineResponse20013TemplateValidation](docs/InlineResponse20013TemplateValidation.md)
+ - [InlineResponse20013Events](docs/InlineResponse20013Events.md)
+ - [InlineResponse20013NbResults](docs/InlineResponse20013NbResults.md)
+ - [InlineResponse20013Pages](docs/InlineResponse20013Pages.md)
  - [InlineResponse20014](docs/InlineResponse20014.md)
+ - [InlineResponse20014TemplateValidation](docs/InlineResponse20014TemplateValidation.md)
  - [InlineResponse20015](docs/InlineResponse20015.md)
  - [InlineResponse20016](docs/InlineResponse20016.md)
- - [InlineResponse20016SuiviCourrier](docs/InlineResponse20016SuiviCourrier.md)
  - [InlineResponse20017](docs/InlineResponse20017.md)
+ - [InlineResponse20017SuiviCourrier](docs/InlineResponse20017SuiviCourrier.md)
  - [InlineResponse20018](docs/InlineResponse20018.md)
- - [InlineResponse20018Quotas](docs/InlineResponse20018Quotas.md)
- - [InlineResponse20018QuotasCredit](docs/InlineResponse20018QuotasCredit.md)
- - [InlineResponse20018QuotasPages](docs/InlineResponse20018QuotasPages.md)
- - [InlineResponse20018QuotasPlan](docs/InlineResponse20018QuotasPlan.md)
  - [InlineResponse20019](docs/InlineResponse20019.md)
+ - [InlineResponse20019Quotas](docs/InlineResponse20019Quotas.md)
+ - [InlineResponse20019QuotasCredit](docs/InlineResponse20019QuotasCredit.md)
+ - [InlineResponse20019QuotasPages](docs/InlineResponse20019QuotasPages.md)
+ - [InlineResponse20019QuotasPlan](docs/InlineResponse20019QuotasPlan.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse20020](docs/InlineResponse20020.md)
- - [InlineResponse20020ListErrors](docs/InlineResponse20020ListErrors.md)
+ - [InlineResponse20021](docs/InlineResponse20021.md)
+ - [InlineResponse20021ListErrors](docs/InlineResponse20021ListErrors.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)

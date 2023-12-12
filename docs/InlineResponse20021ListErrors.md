@@ -1,4 +1,4 @@
-# InlineResponse20020ListErrors
+# InlineResponse20021ListErrors
 
 ## Properties
 Name | Type | Description | Notes

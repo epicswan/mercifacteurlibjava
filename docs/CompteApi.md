@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getQuotaCompte"></a>
 # **getQuotaCompte**
-> InlineResponse20018 getQuotaCompte(wwServiceId, wwAccessToken)
+> InlineResponse20019 getQuotaCompte(wwServiceId, wwAccessToken)
 
 Obtenir les infos des quotas liés au compte Merci facteur Pro.
 
@@ -27,7 +27,7 @@ CompteApi apiInstance = new CompteApi();
 String wwServiceId = "\"yourIdService\""; // String | Votre service Id
 String wwAccessToken = "\"ValidAccessToken\""; // String | Un access token valide
 try {
-    InlineResponse20018 result = apiInstance.getQuotaCompte(wwServiceId, wwAccessToken);
+    InlineResponse20019 result = apiInstance.getQuotaCompte(wwServiceId, wwAccessToken);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CompteApi#getQuotaCompte");
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 
 <a name="getWebhookEndpoint"></a>
 # **getWebhookEndpoint**
-> InlineResponse20019 getWebhookEndpoint(wwServiceId, wwAccessToken)
+> InlineResponse20020 getWebhookEndpoint(wwServiceId, wwAccessToken)
 
 Obtenir l&#x27;URL de webhook parametrée sur le compte.
 
@@ -74,7 +74,7 @@ CompteApi apiInstance = new CompteApi();
 String wwServiceId = "\"yourIdService\""; // String | Votre service Id
 String wwAccessToken = "\"ValidAccessToken\""; // String | Un access token valide
 try {
-    InlineResponse20019 result = apiInstance.getWebhookEndpoint(wwServiceId, wwAccessToken);
+    InlineResponse20020 result = apiInstance.getWebhookEndpoint(wwServiceId, wwAccessToken);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CompteApi#getWebhookEndpoint");
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 
