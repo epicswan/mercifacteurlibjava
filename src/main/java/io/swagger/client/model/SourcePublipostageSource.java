@@ -11,7 +11,7 @@
  */
 
 package io.swagger.client.model;
-
+import java.util.List;
 import java.util.Objects;
 import java.util.Arrays;
 import com.google.gson.TypeAdapter;
@@ -137,13 +137,12 @@ public class SourcePublipostageSource {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SourcePublipostageSource {\n");
-    
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    List<String> values = Arrays.asList(
+            "\"type\": \"" + toIndentedString(type) + "\"",
+            "\"value\": [" + toIndentedString(value) + "]"
+    );
+
+    return String.format("{%s}", String.join(",", values));
   }
 
   /**

@@ -12,6 +12,7 @@
 
 package io.swagger.client.model;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Arrays;
 import com.google.gson.TypeAdapter;
@@ -116,15 +117,15 @@ public class SendCourrierContentPhoto {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SendCourrierContentPhoto {\n");
-    
-    sb.append("    files: ").append(toIndentedString(files)).append("\n");
-    sb.append("    base64files: ").append(toIndentedString(base64files)).append("\n");
-    sb.append("    tokenLibrary: ").append(toIndentedString(tokenLibrary)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    List<String> values = Arrays.asList(
+    "files: " + toIndentedString(files),
+    "base64files: " + toIndentedString(base64files),
+    "tokenLibrary: " + toIndentedString(tokenLibrary)
+    );
+
+    return String.format("{\"%s\"}", String.join(",", values));
   }
+
 
   /**
    * Convert the given object to string with each line indented by 4 spaces

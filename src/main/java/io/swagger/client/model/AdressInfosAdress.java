@@ -12,6 +12,7 @@
 
 package io.swagger.client.model;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Arrays;
 import com.google.gson.TypeAdapter;
@@ -355,27 +356,29 @@ public class AdressInfosAdress {
 
 
   @Override
+
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class AdressInfosAdress {\n");
-    
-    sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
-    sb.append("    civilite: ").append(toIndentedString(civilite)).append("\n");
-    sb.append("    nom: ").append(toIndentedString(nom)).append("\n");
-    sb.append("    prenom: ").append(toIndentedString(prenom)).append("\n");
-    sb.append("    societe: ").append(toIndentedString(societe)).append("\n");
-    sb.append("    adresse1: ").append(toIndentedString(adresse1)).append("\n");
-    sb.append("    adresse2: ").append(toIndentedString(adresse2)).append("\n");
-    sb.append("    adresse3: ").append(toIndentedString(adresse3)).append("\n");
-    sb.append("    cp: ").append(toIndentedString(cp)).append("\n");
-    sb.append("    ville: ").append(toIndentedString(ville)).append("\n");
-    sb.append("    pays: ").append(toIndentedString(pays)).append("\n");
-    sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    consent: ").append(toIndentedString(consent)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    List<String> values = Arrays.asList(
+            "\"logo\": \"" + toIndentedString(logo) + "\"",
+            "\"civilite\": \"" + toIndentedString(civilite) + "\"",
+            "\"nom\": \"" + toIndentedString(nom) + "\"",
+            "\"prenom\": \"" + toIndentedString(prenom) + "\"",
+            "\"societe\": \"" + toIndentedString(societe) + "\"",
+            "\"adresse1\": \"" + toIndentedString(adresse1) + "\"",
+            "\"adresse2\": \"" + toIndentedString(adresse2) + "\"",
+            "\"adresse3\": \"" + toIndentedString(adresse3) + "\"",
+            "\"cp\": \"" + toIndentedString(cp) + "\"",
+            "\"ville\": \"" + toIndentedString(ville) + "\"",
+            "\"pays\": \"" + toIndentedString(pays) + "\"",
+            "\"phone\": \"" + toIndentedString(phone) + "\"",
+            "\"email\": \"" + toIndentedString(email) + "\"",
+            "\"consent\": " + toIndentedString(consent)
+    );
+
+    return String.format("{%s}", String.join(",", values));
   }
+
+
 
   /**
    * Convert the given object to string with each line indented by 4 spaces

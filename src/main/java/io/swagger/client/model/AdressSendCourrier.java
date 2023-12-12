@@ -111,6 +111,16 @@ public class AdressSendCourrier {
     return sb.toString();
   }
 
+  public String toJson() {
+    List<String> values = Arrays.asList(
+            "\"exp\": \"" + toIndentedString(exp) + "\"",
+            "\"dest\": [" + toIndentedString(dest) + "]"
+    );
+
+    return String.format("{%s}", String.join(",", values));
+  }
+
+
   /**
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).

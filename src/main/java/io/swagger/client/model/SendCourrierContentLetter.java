@@ -12,6 +12,7 @@
 
 package io.swagger.client.model;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Arrays;
 import com.google.gson.TypeAdapter;
@@ -183,15 +184,15 @@ public class SendCourrierContentLetter {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SendCourrierContentLetter {\n");
-    
-    sb.append("    files: ").append(toIndentedString(files)).append("\n");
-    sb.append("    base64files: ").append(toIndentedString(base64files)).append("\n");
-    sb.append("    finalFilename: ").append(toIndentedString(finalFilename)).append("\n");
-    sb.append("    printSides: ").append(toIndentedString(printSides)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    List<String> values = Arrays.asList(
+
+    "files: " + toIndentedString(files),
+    "base64files: " + toIndentedString(base64files),
+    "finalFilename: " + toIndentedString(finalFilename),
+    "printSides: " + toIndentedString(printSides)
+    );
+
+    return String.format("{\"%s\"}", String.join(",", values));
   }
 
   /**

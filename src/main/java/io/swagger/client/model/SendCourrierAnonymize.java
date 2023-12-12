@@ -23,6 +23,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 /**
  * Facultatif, permet de demander la suppression d\\&#x27;éléments du courrier un certain délai (en nombre de jours) après l\\&#x27;impression du courrier. A utiliser si vous ne souhaitez pas que les données des courriers soient conservées sur les serveurs de Merci Facteur. Exemple de valeur : {\&quot;delay\&quot;:15,\&quot;target\&quot;:[\&quot;content\&quot;,\&quot;exp\&quot;,\&quot;dest\&quot;]} (plus d\\&#x27;infos ici : https://github.com/MerciFacteur/Merci-facteur-API/#anonymisation)
  */
@@ -147,14 +148,13 @@ public class SendCourrierAnonymize {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SendCourrierAnonymize {\n");
-    
-    sb.append("    delay: ").append(toIndentedString(delay)).append("\n");
-    sb.append("    target: ").append(toIndentedString(target)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    List<String> targetValues = this.target.stream()
+            .map(TargetEnum::getValue)
+            .collect(Collectors.toList());
+
+    return String.format("{\"delay\":%d,\"target\":[\"%s\"]}", this.delay, String.join("\",\"", targetValues));
   }
+
 
   /**
    * Convert the given object to string with each line indented by 4 spaces

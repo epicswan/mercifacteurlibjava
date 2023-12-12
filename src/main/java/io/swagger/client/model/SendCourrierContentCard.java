@@ -12,6 +12,7 @@
 
 package io.swagger.client.model;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Arrays;
 import com.google.gson.TypeAdapter;
@@ -298,18 +299,20 @@ public class SendCourrierContentCard {
 
 
   @Override
+
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SendCourrierContentCard {\n");
-    
-    sb.append("    format: ").append(toIndentedString(format)).append("\n");
-    sb.append("    visuel: ").append(toIndentedString(visuel)).append("\n");
-    sb.append("    text: ").append(toIndentedString(text)).append("\n");
-    sb.append("    coin: ").append(toIndentedString(coin)).append("\n");
-    sb.append("    papier: ").append(toIndentedString(papier)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    List<String> values = Arrays.asList(
+    "format: " + toIndentedString(format),
+    "visuel: " + toIndentedString(visuel),
+    "text: " + toIndentedString(text),
+    "coin: " + toIndentedString(coin),
+    "papier: " + toIndentedString(papier)
+    );
+
+    return String.format("{\"%s\"}", String.join(",", values));
   }
+
+
 
   /**
    * Convert the given object to string with each line indented by 4 spaces

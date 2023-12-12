@@ -67,7 +67,7 @@ public class InlineResponse2006Adress {
   }
 
    /**
-   * Id de l&#x27;adresse
+   * Id de l'adresse
    * @return id
   **/
   @Schema(description = "Id de l'adresse")
