@@ -46,11 +46,11 @@ public class SendCourrierContentLetter {
   @JsonAdapter(PrintSidesEnum.Adapter.class)
   public enum PrintSidesEnum {
     @SerializedName("recto")
-    RECTO("recto"),
+    RECTO("[\"recto\"]"),
     @SerializedName("rectoverso")
-    RECTOVERSO("rectoverso"),
+    RECTOVERSO("[\"rectoverso\"]"),
     @SerializedName("distinctrectoverso")
-    DISTINCTRECTOVERSO("distinctrectoverso");
+    DISTINCTRECTOVERSO("[\"distinctrectoverso\"]");
 
     private String value;
 
@@ -185,14 +185,13 @@ public class SendCourrierContentLetter {
   @Override
   public String toString() {
     List<String> values = Arrays.asList(
-
-    "files: " + toIndentedString(files),
-    "base64files: " + toIndentedString(base64files),
-    "finalFilename: " + toIndentedString(finalFilename),
-    "printSides: " + toIndentedString(printSides)
+            "\"files\": " + toIndentedString(files),
+            "\"base64files\": " + toIndentedString(base64files),
+            "\"finalFilename\": \"" + toIndentedString(finalFilename) + "\"",
+            "\"printSides\": " + toIndentedString(printSides)
     );
 
-    return String.format("{\"%s\"}", String.join(",", values));
+    return String.format("{%s}", String.join(",", values));
   }
 
   /**

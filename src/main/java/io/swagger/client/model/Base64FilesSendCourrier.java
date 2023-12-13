@@ -12,11 +12,10 @@
 
 package io.swagger.client.model;
 
-import java.util.Objects;
-import java.util.Arrays;
+import java.util.*;
+
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.util.ArrayList;
-import java.util.List;
+
 /**
  * vide, ou tableau du/des fichier(s) (PDF pour les lettres, JPEG pour les photos) à envoyer, convertis en base64
  */
@@ -42,13 +41,24 @@ public class Base64FilesSendCourrier extends ArrayList<String> {
   }
 
 
+  private List<String> files = new ArrayList<>();
+
+  public boolean add(String fileName) {
+    files.add(fileName);
+    return true;
+  }
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class Base64FilesSendCourrier {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("}");
-    return sb.toString();
+
+    String formattedArray = formatArray(files);
+
+    return formattedArray;
+  }
+
+  private String formatArray(List<String> array) {
+    StringJoiner joiner = new StringJoiner(",", "[", "]");
+    array.forEach(element -> joiner.add("\"" + element + "\""));
+    return joiner.toString();
   }
 
   /**

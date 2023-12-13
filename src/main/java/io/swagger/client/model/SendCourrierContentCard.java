@@ -37,17 +37,17 @@ public class SendCourrierContentCard {
   @JsonAdapter(FormatEnum.Adapter.class)
   public enum FormatEnum {
     @SerializedName("postcard")
-    POSTCARD("postcard"),
+    POSTCARD("\"postcard\""),
     @SerializedName("naked-postcard")
-    NAKED_POSTCARD("naked-postcard"),
+    NAKED_POSTCARD("\"naked-postcard\""),
     @SerializedName("classic")
-    CLASSIC("classic"),
+    CLASSIC("\"classic\""),
     @SerializedName("folded")
-    FOLDED("folded"),
+    FOLDED("\"folded\""),
     @SerializedName("large")
-    LARGE("large"),
+    LARGE("\"large\""),
     @SerializedName("large-a4")
-    LARGE_A4("large-a4");
+    LARGE_A4("\"large-a4\"");
 
     private String value;
 
@@ -97,9 +97,9 @@ public class SendCourrierContentCard {
   @JsonAdapter(CoinEnum.Adapter.class)
   public enum CoinEnum {
     @SerializedName("arrondi")
-    ARRONDI("arrondi"),
+    ARRONDI("\"arrondi\""),
     @SerializedName("carre")
-    CARRE("carre");
+    CARRE("\"carre\"");
 
     private String value;
 
@@ -143,11 +143,11 @@ public class SendCourrierContentCard {
   @JsonAdapter(PapierEnum.Adapter.class)
   public enum PapierEnum {
     @SerializedName("classic")
-    CLASSIC("classic"),
+    CLASSIC("\"classic\""),
     @SerializedName("nacre")
-    NACRE("nacre"),
+    NACRE("\"nacre\""),
     @SerializedName("creation")
-    CREATION("creation");
+    CREATION("\"creation\"");
 
     private String value;
 
@@ -302,16 +302,15 @@ public class SendCourrierContentCard {
 
   public String toString() {
     List<String> values = Arrays.asList(
-    "format: " + toIndentedString(format),
-    "visuel: " + toIndentedString(visuel),
-    "text: " + toIndentedString(text),
-    "coin: " + toIndentedString(coin),
-    "papier: " + toIndentedString(papier)
+
+    "\"format\": " + toIndentedString(format),
+    "\"visuel\": " + toIndentedString(visuel),
+    "\"text\": " + toIndentedString(text),
+    "\"coin\": " + toIndentedString(coin),
+    "\"papier\": " + toIndentedString(papier)
     );
-
-    return String.format("{\"%s\"}", String.join(",", values));
+    return String.format("{%s}", String.join(",", values));
   }
-
 
 
   /**

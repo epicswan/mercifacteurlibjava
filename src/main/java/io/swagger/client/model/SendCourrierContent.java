@@ -125,13 +125,17 @@ public class SendCourrierContent {
     @Override
     public String toString() {
         List<String> values = Arrays.asList(
-                "letter: " + toIndentedString(letter),
-                "photo: " + toIndentedString(photo),
-                "card: " + toIndentedString(card)
+                "\"letter\": " + toIndentedString(letter),
+                "\"photo\": " + toIndentedString(photo),
+                "\"card\": " + toIndentedString(card)
+
         );
 
-        return String.format("{\"%s\"}", String.join(",", values));
+        return String.format("{%s}", String.join(",", values));
     }
+
+    /**
+
 
     /**
      * Convert the given object to string with each line indented by 4 spaces

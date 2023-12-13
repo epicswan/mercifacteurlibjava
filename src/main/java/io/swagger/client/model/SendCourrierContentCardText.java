@@ -12,6 +12,7 @@
 
 package io.swagger.client.model;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Arrays;
 import com.google.gson.TypeAdapter;
@@ -34,11 +35,11 @@ public class SendCourrierContentCardText {
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
     @SerializedName("html")
-    HTML("html"),
+    HTML("\"html\""),
     @SerializedName("customimg")
-    CUSTOMIMG("customimg"),
+    CUSTOMIMG("\"customimg\""),
     @SerializedName("base64")
-    BASE64("base64");
+    BASE64("\"base64\"");
 
     private String value;
 
@@ -137,13 +138,12 @@ public class SendCourrierContentCardText {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SendCourrierContentCardText {\n");
-    
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    List<String> values = Arrays.asList(
+
+            "\"type\": " + toIndentedString(type),
+            "\"value\": \"" + toIndentedString(value) + "\""
+    );
+    return String.format("{%s}", String.join(",", values));
   }
 
   /**

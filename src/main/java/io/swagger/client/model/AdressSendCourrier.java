@@ -102,24 +102,13 @@ public class AdressSendCourrier {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class AdressSendCourrier {\n");
-    
-    sb.append("    exp: ").append(toIndentedString(exp)).append("\n");
-    sb.append("    dest: ").append(toIndentedString(dest)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  public String toJson() {
     List<String> values = Arrays.asList(
             "\"exp\": \"" + toIndentedString(exp) + "\"",
-            "\"dest\": [" + toIndentedString(dest) + "]"
+            "\"dest\": " + toIndentedString(dest)
     );
 
     return String.format("{%s}", String.join(",", values));
   }
-
 
   /**
    * Convert the given object to string with each line indented by 4 spaces

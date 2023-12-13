@@ -267,7 +267,7 @@ public class InlineResponse20011Envois {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse20011Envois {\n");
-    
+
     sb.append("    idEnvoi: ").append(toIndentedString(idEnvoi)).append("\n");
     sb.append("    statut: ").append(toIndentedString(statut)).append("\n");
     sb.append("    nbPage: ").append(toIndentedString(nbPage)).append("\n");

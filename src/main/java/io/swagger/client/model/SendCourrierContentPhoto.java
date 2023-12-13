@@ -116,14 +116,15 @@ public class SendCourrierContentPhoto {
 
 
   @Override
+
   public String toString() {
     List<String> values = Arrays.asList(
-    "files: " + toIndentedString(files),
-    "base64files: " + toIndentedString(base64files),
-    "tokenLibrary: " + toIndentedString(tokenLibrary)
+            "\"files\": " + toIndentedString(files),
+            "\"base64files\": " + toIndentedString(base64files),
+            "\"tokenLibrary\": \"" + toIndentedString(tokenLibrary) + "\""
     );
 
-    return String.format("{\"%s\"}", String.join(",", values));
+    return String.format("{%s}", String.join(",", values));
   }
 
 
