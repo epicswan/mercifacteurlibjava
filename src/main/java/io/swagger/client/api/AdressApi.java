@@ -280,11 +280,7 @@ public class AdressApi {
         com.squareup.okhttp.Call call = getAdressInfosCall(wwServiceId, wwAccessToken, idAdress, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
-    }
+}
 
     /**
      * Obtenir les infos complètes d&#x27;une ou plusieurs adresse(s) à partir de leurs adresse Id (destinataire ou expéditeur).
